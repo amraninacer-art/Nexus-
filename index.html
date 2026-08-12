@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS — Beyond the Ordinary | Premium Algerian Fashion</title>
+<meta name="description" content="NEXUS — a premium contemporary Algerian fashion house. Where identity meets movement.">
+<meta name="theme-color" content="#0B1520">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" fill="%230B1520"/><text x="16" y="23" font-family="Arial" font-size="20" font-weight="bold" fill="%23F2EEE3" text-anchor="middle">N</text></svg>'>
+<script>try{var _t=JSON.parse(localStorage.getItem('nx_theme'))||'dark';document.documentElement.dataset.theme=_t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ================= NEXUS — DESIGN SYSTEM v3 ================= */
+:root{
+  --ivory:#F5F1E8; --sand:#E8E1D5; --navy:#162A3D; --sage:#87947A; --burnt:#D96835;
+  --paper:#F5F1E8; --paper2:#EDE7DB; --paper3:#E4DCCA; --ink:#162A3D;
+  --ink-60:rgba(22,42,61,.6); --ink-30:rgba(22,42,61,.3); --ink-12:rgba(22,42,61,.12);
+  --line:rgba(22,42,61,.16); --deep:#12202E; --header-bg:rgba(245,241,232,.9);
+  --hero-glow:rgba(22,42,61,.14); --alt1:#DCE0D3; --alt2:#EDE6D6; --alt3:#E5DDCB;
+  --chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23162A3D' fill='none' stroke-width='1.4'/%3E%3C/svg%3E");
+  --f-display:'Anton',Impact,sans-serif; --f-serif:'Cormorant Garamond',Georgia,serif; --f-body:'Manrope',system-ui,sans-serif;
+  --ease:polygon(.16,1,.3,1); --hd:76px;
+}
+html[data-theme="dark"]{
+  --paper:#0B1520; --paper2:#101E2C; --paper3:#152636; --ink:#F2EEE3;
+  --ink-60:rgba(242,238,227,.62); --ink-30:rgba(242,238,227,.3); --ink-12:rgba(242,238,227,.12);
+  --line:rgba(242,238,227,.14); --deep:#0E1B28; --header-bg:rgba(11,21,32,.9);
+  --hero-glow:rgba(135,148,122,.22); --alt1:#16241C; --alt2:#14222F; --alt3:#1B2016;
+  --chev:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23F2EEE3' fill='none' stroke-width='1.4'/%3E%3C/svg%3E");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;transition:background .5s var(--ease),color .5s var(--ease)}
+::selection{background:var(--burnt);color:#F5F1E8}
+img,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--burnt);outline-offset:3px}
+section{scroll-margin-top:var(--hd)}
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:4000;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 9s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-4%,3%)}40%{transform:translate(3%,-5%)}60%{transform:translate(-3%,4%)}80%{transform:translate(5%,2%)}100%{transform:translate(0,0)}}
+#prog{position:fixed;top:0;left:0;right:0;height:2px;background:var(--burnt);transform-origin:left;transform:scaleX(0);z-index:950}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--burnt)}
+.mono{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600}
+.serif-i{font-family:var(--f-serif);font-style:italic}
+.display{font-family:var(--f-display);text-transform:uppercase;line-height:.92;font-weight:400}
+.mask{overflow:hidden;display:block}.mask>span{display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:18px 34px;font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;border:1px solid var(--ink);transition:.45s var(--ease);min-height:52px}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:var(--burnt);border-color:var(--burnt);color:#F5F1E8}
+.btn-ghost{color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.link-arrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;padding-bottom:6px;position:relative}
+.link-arrow::after{content:"";position:absolute;inset-inline:0;bottom:0;height:1px;background:currentColor;transform-origin:left;transition:transform .5s var(--ease)}
+.link-arrow:hover::after{transform:scaleX(.4)}
+/* ---------- header ---------- */
+header{position:fixed;inset:0 0 auto 0;z-index:900;height:var(--hd);display:flex;align-items:center;transition:background .5s,box-shadow .5s}
+header.solid{background:var(--header-bg);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav-wrap{width:100%;max-width:1680px;margin:0 auto;padding:0 clamp(18px,3.4vw,48px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+.nav-links{display:flex;gap:clamp(16px,2.2vw,34px)}
+.nav-links a{font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;inset-inline:0;bottom:0;height:1px;background:var(--burnt);transform:scaleX(0);transition:transform .45s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.logo{font-family:var(--f-display);font-size:26px;letter-spacing:.12em;justify-self:center}
+.logo em{font-style:normal;color:var(--burnt)}
+.nav-utils{display:flex;justify-content:flex-end;align-items:center;gap:4px}
+.icon-btn{width:44px;height:44px;display:grid;place-items:center;position:relative;border-radius:50%;transition:background .3s}
+.icon-btn:hover{background:var(--ink-12)}
+.icon-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.6}
+.count{position:absolute;top:4px;inset-inline-end:2px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--burnt);color:#F5F1E8;font-size:10px;font-weight:700;display:grid;place-items:center;transform:scale(0);transition:transform .35s var(--ease)}
+.count.on{transform:scale(1)}.count.pulse{animation:pulse .5s var(--ease)}
+@keyframes pulse{40%{transform:scale(1.45)}}
+html[data-theme="light"] .ic-moon{display:none}html[data-theme="dark"] .ic-sun{display:none}
+.lang-cur{display:flex;gap:2px;margin-inline-start:8px;border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang-cur button{font-size:10px;font-weight:700;letter-spacing:.12em;padding:5px 9px;border-radius:999px;transition:.3s}
+.lang-cur button.on{background:var(--ink);color:var(--paper)}
+.burger{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:6px}
+.burger span{width:24px;height:1.6px;background:var(--ink);transition:.4s var(--ease)}
+.burger.open span:first-child{transform:translateY(4px) rotate(45deg)}
+.burger.open span:last-child{transform:translateY(-4px) rotate(-45deg)}
+@media(max-width:1023px){.nav-links,.lang-cur{display:none}.burger{display:flex}.nav-wrap{grid-template-columns:auto 1fr auto}.logo{justify-self:start}}
+/* ---------- intro ---------- */
+#intro{position:fixed;inset:0;z-index:3000;background:var(--paper);display:grid;place-items:center;overflow:hidden}
+#intro .rule{position:absolute;top:50%;left:50%;width:1px;height:0;background:var(--ink-30);transform:translate(-50%,-50%)}
+.intro-word{display:flex;perspective:900px}
+.intro-word span{font-family:var(--f-display);font-size:clamp(64px,17vw,240px);line-height:1;transform-origin:bottom}
+.intro-tag{margin-top:18px;text-align:center;font-family:var(--f-serif);font-style:italic;font-size:clamp(16px,2.4vw,26px);opacity:0}
+.intro-cap{position:absolute;top:26px;inset-inline-start:clamp(18px,3.4vw,48px)}
+/* ---------- HERO: product stage ---------- */
+#hero{min-height:100svh;position:relative;display:flex;flex-direction:column;overflow:clip;padding:calc(var(--hd) + 8px) clamp(16px,3vw,44px) 34px}
+.hero-word{position:absolute;top:9%;left:50%;transform:translateX(-50%);font-size:clamp(96px,25vw,400px);color:transparent;-webkit-text-stroke:1px var(--ink-30);z-index:1;user-select:none;letter-spacing:.02em;white-space:nowrap}
+html[data-theme="light"] .hero-word{-webkit-text-stroke:1px var(--ink-12)}
+.hero-side{position:absolute;top:50%;writing-mode:vertical-rl;transform:translateY(-50%);color:var(--ink-60);z-index:2}
+.hero-side.l{inset-inline-start:14px}.hero-side.r{inset-inline-end:14px;transform:translateY(-50%) rotate(180deg)}
+@media(max-width:899px){.hero-side{display:none}}
+.stage{position:relative;flex:1;perspective:1400px;z-index:2;min-height:360px;touch-action:pan-y;cursor:grab}
+.stage:active{cursor:grabbing}
+.st-glow{position:absolute;left:50%;top:60%;width:min(64vw,760px);height:min(30vw,340px);transform:translate(-50%,-50%);background:radial-gradient(50% 50% at 50% 50%,var(--hero-glow),transparent 70%);z-index:0;pointer-events:none}
+.stage-track{position:absolute;inset:0;transform-style:preserve-3d}
+.st-item{position:absolute;left:50%;top:50%;width:clamp(150px,23vw,290px);margin-left:calc(clamp(150px,23vw,290px)/-2);will-change:transform;cursor:pointer}
+.plinth{aspect-ratio:3/4;border-radius:150px 150px 6px 6px;background:linear-gradient(170deg,var(--paper3),var(--paper2) 70%);border:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 40px 70px -40px rgba(0,0,0,.5)}
+.plinth::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 50% at 50% 28%,rgba(255,255,255,.14),transparent 70%)}
+html[data-theme="light"] .plinth::before{background:radial-gradient(70% 50% at 50% 28%,rgba(255,255,255,.5),transparent 70%)}
+.plinth .garb{width:64%;animation:float 7s ease-in-out infinite alternate}
+@keyframes float{from{transform:translateY(-6px)}to{transform:translateY(8px)}}
+.st-label{position:absolute;top:100%;left:50%;transform:translate(-50%,16px);text-align:center;opacity:0;transition:opacity .5s .15s;white-space:nowrap;pointer-events:none}
+.st-label b{display:block;font-size:12px;letter-spacing:.2em}
+.st-label span{color:var(--burnt);font-size:12px;font-weight:700}
+.st-item.active .st-label{opacity:1}
+.st-arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:18px;z-index:5;transition:.35s var(--ease);background:color-mix(in srgb,var(--paper) 60%,transparent)}
+.st-arrow:hover{border-color:var(--burnt);color:var(--burnt)}
+.st-arrow.prev{inset-inline-start:2%}.st-arrow.next{inset-inline-end:2%}
+.hero-low{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-top:8px}
+.hero-tag .serif-i{font-size:clamp(20px,2.6vw,30px);display:block}
+.hero-tag .mono{display:block;margin-top:8px;color:var(--ink-60)}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--ink-60);margin-top:clamp(18px,2.6vw,30px);position:relative;z-index:3}
+.scroll-cue{display:flex;align-items:center;gap:10px}
+.scroll-cue i{width:44px;height:1px;background:var(--ink-60);position:relative;overflow:hidden;display:block}
+.scroll-cue i::after{content:"";position:absolute;inset:0;background:var(--burnt);animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+/* ---------- marquee ---------- */
+.marquee{background:var(--deep);color:var(--ink);overflow:hidden;padding:14px 0;transform:rotate(-1.2deg) scale(1.02);border-block:1px solid var(--line)}
+.marquee-track{display:flex;width:max-content;animation:mq 30s linear infinite}
+.marquee-track span{font-family:var(--f-display);font-size:clamp(15px,1.8vw,22px);letter-spacing:.14em;padding:0 26px;white-space:nowrap;display:flex;align-items:center;gap:26px}
+.marquee-track span::after{content:"✳";color:var(--burnt);font-size:.8em}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* ---------- shared ---------- */
+.sect{padding:clamp(90px,11vw,160px) clamp(18px,3.4vw,48px);position:relative}
+.wrap{max-width:1560px;margin:0 auto}
+.sect-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(40px,6vw,80px);flex-wrap:wrap}
+.sect-head h2{font-size:clamp(44px,7.5vw,110px)}
+/* ---------- SHOWCASE: scroll scenes ---------- */
+#showcase{background:var(--paper2);border-block:1px solid var(--line)}
+.sh-pin{height:100vh;position:relative;overflow:hidden}
+.scene{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 6vw;opacity:0;visibility:hidden}
+.scene .sc-txt .idx{color:var(--burnt)}
+.scene h3{font-family:var(--f-display);font-size:clamp(38px,6vw,92px);text-transform:uppercase;margin:14px 0 10px}
+.scene .sc-line{color:var(--ink-60);max-width:44ch;font-size:clamp(15px,1.4vw,18px)}
+.spec{margin-top:30px;display:grid;gap:16px;max-width:420px}
+.spec-row .s-l{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;margin-bottom:7px;color:var(--ink-60)}
+.spec-row .s-l b{color:var(--ink)}
+.bar{height:2px;background:var(--line);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0;background:var(--burnt);transform:scaleX(var(--w,1));transform-origin:left}
+.scene .sc-cta{margin-top:34px}
+.sc-vis{position:relative;display:grid;place-items:center;height:100%}
+.sc-glow{position:absolute;width:min(36vw,520px);aspect-ratio:1;border-radius:50%;background:radial-gradient(50% 50%,var(--hero-glow),transparent 70%)}
+.sp-garb{width:clamp(200px,30vw,420px);position:relative}
+.sp-garb .garb{animation:float 8s ease-in-out infinite alternate}
+@media(max-width:819px),(.no-gsap){.sh-pin{height:auto}.scene{position:relative;opacity:1;visibility:visible;grid-template-columns:1fr;padding:70px 6vw;gap:20px}.sc-vis{order:-1;min-height:340px}}
+/* ---------- CAMPAIGN: giant type ---------- */
+#campaign{overflow:clip}
+.cp-pin{height:100vh;position:relative;overflow:hidden;display:grid;place-items:center}
+.cp-glow{position:absolute;inset:0;background:radial-gradient(46% 40% at 50% 56%,rgba(217,104,53,.16),transparent 70%);opacity:0}
+.cp-word{text-align:center;font-size:clamp(64px,15vw,250px);z-index:1}
+.cp-word .hollow{color:transparent;-webkit-text-stroke:1px var(--ink-30)}
+.cp-garb{position:absolute;top:50%;left:50%;width:clamp(170px,24vw,330px);margin-left:calc(clamp(170px,24vw,330px)/-2);z-index:3;will-change:transform}
+.cp-cta{position:absolute;bottom:9%;left:50%;transform:translateX(-50%);z-index:4;opacity:0}
+@media(max-width:819px){.cp-pin{height:auto;padding:90px 0}.cp-garb{position:relative;margin:30px auto 0;top:auto;left:auto}.cp-cta{position:relative;bottom:auto;transform:none;opacity:1;margin-top:34px}}
+/* ---------- collections ---------- */
+#collections{background:var(--paper2)}
+.col-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(14px,2vw,28px)}
+.col-card{position:relative;overflow:hidden;border-radius:4px;cursor:pointer}
+.cc-vis{position:relative;overflow:hidden;aspect-ratio:4/5;display:grid;place-items:center;background:var(--paper3)}
+.col-card.c1{grid-column:1/6;grid-row:1/3}.col-card.c1 .cc-vis{aspect-ratio:auto;height:100%}
+.col-card.c2,.col-card.c3{grid-column:6/13}.col-card.c2 .cc-vis,.col-card.c3 .cc-vis{aspect-ratio:16/7}
+.cc-vis .garb{width:min(46%,300px);transition:transform 1.1s var(--ease);z-index:1}
+.cc-vis img{transition:transform 1.2s var(--ease);z-index:2}
+.col-card:hover .garb{transform:translateY(-10px) scale(1.04)}
+.col-card:hover .cc-vis img{transform:scale(1.05)}
+.ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cc-info{position:absolute;inset:auto 0 0 0;padding:22px 24px;display:flex;justify-content:space-between;align-items:flex-end;background:linear-gradient(transparent,rgba(5,10,18,.5));z-index:3}
+.cc-info h3{font-family:var(--f-display);font-size:clamp(22px,2.6vw,40px);letter-spacing:.06em;color:#F5F1E8}
+.cc-info .mono{color:rgba(245,241,232,.8)}
+.cc-arrow{width:46px;height:46px;border:1px solid #F5F1E8;border-radius:50%;display:grid;place-items:center;font-size:18px;transition:.45s var(--ease);color:#F5F1E8}
+.col-card:hover .cc-arrow{background:var(--burnt);border-color:var(--burnt);transform:rotate(45deg)}
+@media(max-width:899px){.col-grid{grid-template-columns:1fr}.col-card.c1,.col-card.c2,.col-card.c3{grid-column:auto;grid-row:auto}.cc-vis,.col-card.c2 .cc-vis,.col-card.c3 .cc-vis{aspect-ratio:4/3}}
+/* ---------- shop ---------- */
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px);border-block:1px solid var(--line);padding:16px 0}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{padding:10px 20px;border:1px solid var(--line);border-radius:999px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;transition:.35s var(--ease)}
+.pill:hover{border-color:var(--ink)}
+.pill.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tool-right{display:flex;align-items:center;gap:18px}
+.results-n{color:var(--ink-60)}
+select.sort{appearance:none;border:1px solid var(--line);background:var(--paper);padding:10px 38px 10px 16px;border-radius:999px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;cursor:pointer;background-image:var(--chev);background-repeat:no-repeat;background-position:right 14px center;color:var(--ink)}
+[dir="rtl"] select.sort{background-position:left 14px center;padding:10px 16px 10px 38px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:clamp(18px,2.4vw,34px) clamp(14px,2vw,26px)}
+.pcard{position:relative}
+.pvis{position:relative;aspect-ratio:3/4;border-radius:4px;overflow:hidden;display:grid;place-items:center;cursor:pointer}
+.pvis::before{content:"";position:absolute;inset:0;background:radial-gradient(75% 55% at 50% 32%,rgba(255,255,255,.12),transparent 70%)}
+.pvis .garb{width:62%;transition:transform 1s var(--ease);z-index:1}
+.pcard:hover .pvis .garb{transform:translateY(-8px) scale(1.045)}
+.pbadge{position:absolute;top:14px;inset-inline-start:14px;z-index:2;background:var(--burnt);color:#F5F1E8;font-size:9px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;padding:6px 10px}
+.pbadge.low{background:var(--ink);color:var(--paper)}
+.wish-btn{position:absolute;top:10px;inset-inline-end:10px;z-index:3;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--paper) 72%,transparent);backdrop-filter:blur(6px)}
+.wish-btn svg{width:17px;height:17px;fill:none;stroke:var(--ink);stroke-width:1.6;transition:.3s}
+.wish-btn.on svg{fill:var(--burnt);stroke:var(--burnt)}
+.qv-bar{position:absolute;inset-inline:0;bottom:0;z-index:2;padding:12px;transform:translateY(105%);transition:transform .5s var(--ease)}
+.pcard:hover .qv-bar,.pcard:focus-within .qv-bar{transform:translateY(0)}
+.qv-bar button{width:100%;background:var(--ink);color:var(--paper);padding:13px;font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:700}
+.qv-bar button:hover{background:var(--burnt);color:#F5F1E8}
+.soldout .pvis::after{content:"SOLD OUT";position:absolute;inset:0;display:grid;place-items:center;background:color-mix(in srgb,var(--paper) 55%,transparent);font-size:12px;letter-spacing:.4em;font-weight:700;z-index:2}
+@media(hover:none){.qv-bar{transform:none;position:static;padding:10px 0 0}.qv-bar button{background:transparent;color:var(--ink);border:1px solid var(--line);padding:12px}}
+.pinfo{padding-top:16px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.pinfo .cat{color:var(--ink-60);display:block;margin-bottom:4px}
+.pinfo h3{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.price{font-weight:600;white-space:nowrap;font-size:14px}
+@media(max-width:600px){.pgrid{grid-template-columns:repeat(2,1fr);gap:22px 12px}.pinfo{flex-direction:column;gap:4px}}
+/* ---------- story ---------- */
+#story{background:var(--paper2)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,100px)}
+.story-left{position:sticky;top:calc(var(--hd) + 30px);align-self:start}
+.story-left h2{font-size:clamp(48px,7vw,110px)}
+.story-left .serif-i{display:block;margin-top:18px;font-size:clamp(18px,2vw,26px);color:var(--sage)}
+.story-img{margin-top:34px;aspect-ratio:3/4;max-width:360px;border-radius:170px 170px 4px 4px;overflow:hidden;position:relative;background:var(--paper3)}
+.story-right p{font-size:clamp(16px,1.4vw,19px);line-height:1.8;margin-bottom:26px;max-width:56ch}
+.story-right p:first-of-type::first-letter{font-family:var(--f-serif);font-size:3.4em;float:inline-start;line-height:.8;padding-inline-end:12px;color:var(--burnt)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink-30);margin-top:30px}
+.stats div{padding:22px 10px 0;border-inline-start:1px solid var(--ink-30)}
+.stats div:first-child{border-inline-start:0;padding-inline-start:0}
+.stats b{font-family:var(--f-display);font-size:clamp(24px,3vw,40px);display:block}
+.stats span{color:var(--ink-60)}
+@media(max-width:899px){.story-grid{grid-template-columns:1fr}.story-left{position:static}}
+/* ---------- FAQ ---------- */
+.faq-word{font-size:clamp(60px,12vw,190px);color:transparent;-webkit-text-stroke:1px var(--ink-30);margin-bottom:clamp(30px,4vw,60px)}
+.faq-item{border-top:1px solid var(--line)}
+.faq-item:last-child{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;font-weight:700;font-size:clamp(15px,1.6vw,19px);text-align:start}
+.faq-q .ic{font-size:22px;color:var(--burnt);transition:transform .45s var(--ease);flex:0 0 auto}
+.faq-item.open .ic{transform:rotate(45deg)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a>div{overflow:hidden}
+.faq-a p{padding:0 0 26px;color:var(--ink-60);max-width:76ch}
+/* ---------- join ---------- */
+#join{text-align:center}
+#join .serif-i{font-size:clamp(18px,2.2vw,26px);color:var(--sage)}
+#join h2{font-size:clamp(52px,9vw,150px);margin:16px 0 30px}
+#join h2 em{font-style:normal;color:transparent;-webkit-text-stroke:1px var(--ink-30)}
+/* ---------- footer ---------- */
+footer{background:var(--deep);color:var(--ink);padding:clamp(70px,9vw,120px) clamp(18px,3.4vw,48px) 30px;overflow:clip;border-top:1px solid var(--line)}
+.foot-top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:clamp(26px,4vw,60px);max-width:1560px;margin:0 auto 70px}
+.foot-top h4{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--burnt);margin-bottom:20px}
+.foot-top a{display:block;padding:7px 0;color:var(--ink-60);font-size:14px;transition:color .3s;text-align:start}
+.foot-top a:hover{color:var(--ink)}
+.news p{font-family:var(--f-serif);font-style:italic;font-size:20px;color:var(--ink-60);margin-bottom:22px}
+.news-form{display:flex;border-bottom:1px solid var(--ink-30);max-width:380px}
+.news-form input{flex:1;background:none;border:0;color:var(--ink);padding:14px 0;font-size:14px;min-width:0}
+.news-form input::placeholder{color:var(--ink-30)}
+.news-form button{font-size:11px;letter-spacing:.24em;font-weight:700;text-transform:uppercase;padding:0 4px}
+.news-form button:hover{color:var(--burnt)}
+.foot-selects{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.foot-selects select{background:transparent;border:1px solid var(--ink-30);color:var(--ink);padding:9px 12px;border-radius:999px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.foot-selects select option{color:#162A3D}
+.foot-word{font-family:var(--f-display);font-size:clamp(90px,22vw,360px);line-height:.85;text-align:center;color:transparent;-webkit-text-stroke:1px var(--ink-12);user-select:none;margin-bottom:24px}
+.foot-legal{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;color:var(--ink-60);font-size:12px;letter-spacing:.1em}
+@media(max-width:899px){.foot-top{grid-template-columns:1fr 1fr}}@media(max-width:520px){.foot-top{grid-template-columns:1fr}}
+/* ---------- overlays / drawers ---------- */
+.scrim{position:fixed;inset:0;background:rgba(4,8,14,.55);backdrop-filter:blur(3px);z-index:1500;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;inset-inline-end:0;width:min(460px,94vw);background:var(--paper);z-index:1600;transform:translateX(calc(110% * var(--s,1)));transition:transform .65s var(--ease);display:flex;flex-direction:column}
+[dir="rtl"] .drawer{--s:-1}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px 26px;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-family:var(--f-display);font-size:22px;letter-spacing:.1em}
+.x-btn{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;transition:.3s;font-size:20px}
+.x-btn:hover{background:var(--ink-12);transform:rotate(90deg)}
+.drawer-body{flex:1;overflow-y:auto;padding:20px 26px}
+.drawer-foot{border-top:1px solid var(--line);padding:20px 26px;background:var(--paper2)}
+.cart-item{display:grid;grid-template-columns:86px 1fr auto;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);animation:fadeUp .5s var(--ease)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}}
+.ci-vis{width:86px;aspect-ratio:3/4;border-radius:3px;display:grid;place-items:center;overflow:hidden}
+.ci-vis svg{width:70%}
+.ci-info h4{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.ci-info .meta{color:var(--ink-60);font-size:12px;margin:4px 0 10px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px}
+.qty button{width:30px;height:30px;font-size:15px}
+.qty b{min-width:26px;text-align:center;font-size:13px}
+.ci-right{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end}
+.rm-btn{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-60)}
+.rm-btn:hover{color:var(--burnt)}
+.sum-row{display:flex;justify-content:space-between;padding:5px 0;font-size:14px}
+.sum-row.total{font-weight:700;font-size:17px;border-top:1px solid var(--line);margin-top:8px;padding-top:12px}
+.empty{text-align:center;padding:70px 20px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.empty .ring{width:74px;height:74px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-family:var(--f-display);font-size:22px;color:var(--sage)}
+.empty h4{font-family:var(--f-serif);font-style:italic;font-size:24px}
+.empty p{color:var(--ink-60);font-size:14px}
+.free-ship{font-size:12px;color:var(--sage);margin-bottom:10px}
+#searchOv{position:fixed;inset:0;z-index:1700;background:color-mix(in srgb,var(--paper) 96%,transparent);backdrop-filter:blur(10px);display:flex;flex-direction:column;opacity:0;pointer-events:none;transition:opacity .45s var(--ease)}
+#searchOv.on{opacity:1;pointer-events:auto}
+.s-top{display:flex;align-items:center;gap:20px;padding:26px clamp(18px,3.4vw,48px);border-bottom:1px solid var(--line)}
+.s-top input{flex:1;border:0;background:none;font-family:var(--f-display);font-size:clamp(26px,5vw,54px);text-transform:uppercase;color:var(--ink);min-width:0}
+.s-top input::placeholder{color:var(--ink-30)}
+.s-top input:focus{outline:none}
+.s-body{flex:1;overflow-y:auto;padding:34px clamp(18px,3.4vw,48px)}
+.s-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px}
+.s-item{cursor:pointer}
+#qvOv{position:fixed;inset:0;z-index:1800;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+#qvOv.on{opacity:1;pointer-events:auto}
+#qvOv .scrim-in{position:absolute;inset:0;background:rgba(4,8,14,.6);backdrop-filter:blur(4px)}
+.qv-panel{position:relative;width:min(1080px,96vw);max-height:92vh;overflow-y:auto;background:var(--paper);display:grid;grid-template-columns:1fr 1fr;transform:translateY(30px) scale(.98);transition:transform .55s var(--ease)}
+#qvOv.on .qv-panel{transform:none}
+.qv-media{background:var(--paper2);padding:clamp(20px,3vw,44px);display:flex;flex-direction:column;gap:14px;position:sticky;top:0;height:100%}
+.qv-main{flex:1;min-height:380px;border-radius:4px;display:grid;place-items:center;position:relative;overflow:hidden}
+.qv-main svg{width:min(58%,340px);z-index:1}
+.qv-thumbs{display:flex;gap:10px}
+.qv-thumbs button{width:64px;height:80px;border:1px solid var(--line);border-radius:3px;display:grid;place-items:center;background:var(--paper);overflow:hidden}
+.qv-thumbs button.on{border-color:var(--burnt)}
+.qv-thumbs svg{width:70%}
+.qv-info{padding:clamp(24px,3.4vw,48px)}
+.qv-info .cat{color:var(--ink-60)}
+.qv-info h2{font-family:var(--f-display);font-size:clamp(26px,3vw,40px);letter-spacing:.05em;margin:8px 0 6px}
+.qv-price{font-size:20px;font-weight:700;margin-bottom:18px}
+.qv-desc{color:var(--ink-60);font-size:15px;line-height:1.7;margin-bottom:24px}
+.opt-label{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;margin:20px 0 12px}
+.swatches{display:flex;gap:10px}
+.swatch{width:34px;height:34px;border-radius:50%;outline:1px solid var(--line);outline-offset:3px;transition:.3s}
+.swatch.on{outline-color:var(--burnt);outline-width:2px}
+.sizes{display:flex;gap:8px;flex-wrap:wrap}
+.size-btn{min-width:48px;padding:11px 14px;border:1px solid var(--line);font-size:12px;font-weight:700}
+.size-btn.on{background:var(--ink);color:var(--paper)}
+.qv-actions{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.qv-row{display:flex;gap:10px}
+.qv-meta{margin-top:26px;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px;color:var(--ink-60);font-size:13px}
+.qv-meta b{color:var(--ink)}
+.qv-x{position:absolute;top:14px;inset-inline-end:14px;z-index:5;background:var(--paper);border-radius:50%}
+@media(max-width:819px){.qv-panel{grid-template-columns:1fr}.qv-media{position:static;height:auto}.qv-main{min-height:300px}}
+#coOv{position:fixed;inset:0;z-index:1900;background:var(--paper);overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
+#coOv.on{opacity:1;pointer-events:auto}
+.co-wrap{max-width:1200px;margin:0 auto;padding:calc(var(--hd) + 20px) clamp(18px,3.4vw,48px) 80px}
+.co-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,80px);align-items:start}
+.co-grid h2{font-family:var(--f-display);font-size:clamp(34px,5vw,60px);margin-bottom:30px}
+.field{margin-bottom:20px}
+.field label{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--ink-30);padding:12px 2px;font-size:15px;border-radius:0;color:var(--ink)}
+.field textarea{min-height:70px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--burnt)}
+.field.err input,.field.err select{border-color:var(--burnt);animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.phone-wrap{display:flex;align-items:flex-end;gap:10px}
+.phone-wrap .prefix{padding:12px 0;font-weight:700;border-bottom:1px solid var(--ink-30);color:var(--ink-60)}
+.pay-opt{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);padding:18px;margin-bottom:12px;cursor:pointer}
+.pay-opt.on{border-color:var(--ink);background:var(--paper2)}
+.pay-opt .radio{width:18px;height:18px;border:1px solid var(--ink);border-radius:50%;margin-top:3px;position:relative;flex:0 0 auto}
+.pay-opt.on .radio::after{content:"";position:absolute;inset:3px;background:var(--burnt);border-radius:50%}
+.pay-opt h5{font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.pay-opt p{font-size:13px;color:var(--ink-60)}
+.co-summary{background:var(--paper2);padding:clamp(22px,3vw,36px);position:sticky;top:calc(var(--hd) + 20px)}
+.co-summary h3{font-family:var(--f-display);letter-spacing:.1em;font-size:20px;margin-bottom:20px}
+.co-items{max-height:260px;overflow-y:auto;margin-bottom:14px}
+.co-item{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+.co-item .ci-vis{width:48px}
+.co-item .nm{flex:1}.co-item .nm small{display:block;color:var(--ink-60)}
+.co-note{font-size:12px;color:var(--sage);margin-top:14px}
+.co-err{color:var(--burnt);font-size:13px;margin-top:12px;display:none}
+#okOv{position:fixed;inset:0;z-index:2000;background:var(--paper);display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .5s var(--ease);padding:20px}
+#okOv.on{opacity:1;pointer-events:auto}
+.ok-card{text-align:center;max-width:560px}
+.ok-ring{width:96px;height:96px;border:1px solid var(--burnt);border-radius:50%;display:grid;place-items:center;margin:0 auto 28px;color:var(--burnt);font-size:30px}
+.ok-card h2{font-family:var(--f-display);font-size:clamp(36px,6vw,64px)}
+.ok-code{font-family:var(--f-display);font-size:22px;letter-spacing:.3em;color:var(--burnt);margin:14px 0 20px}
+.ok-card p{color:var(--ink-60);margin-bottom:10px}
+.ok-eta{display:inline-flex;gap:10px;border:1px solid var(--line);padding:12px 22px;border-radius:999px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin:20px 0 30px}
+#menuOv{position:fixed;inset:0;z-index:1400;background:var(--deep);color:var(--ink);transform:translateY(-102%);transition:transform .7s var(--ease);display:flex;flex-direction:column;padding:calc(var(--hd) + 20px) clamp(20px,5vw,44px) 40px;overflow-y:auto}
+#menuOv.open{transform:translateY(0)}
+#menuOv nav{display:flex;flex-direction:column;margin:auto 0}
+#menuOv nav a{font-family:var(--f-display);font-size:clamp(40px,10vw,72px);line-height:1.15;display:flex;align-items:baseline;gap:16px;padding:6px 0;opacity:0;transform:translateY(30px)}
+#menuOv.open nav a{opacity:1;transform:none;transition:.6s var(--ease)}
+#menuOv nav a i{font-style:normal;font-size:12px;color:var(--burnt);font-family:var(--f-body);font-weight:700}
+.menu-foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--ink-60);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,140%);z-index:2500;background:var(--ink);color:var(--paper);padding:15px 26px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:transform .55s var(--ease);max-width:90vw;text-align:center;border-inline-start:3px solid var(--burnt)}
+#toast.on{transform:translate(-50%,0)}
+.fly-img{position:fixed;z-index:2600;pointer-events:none;border-radius:4px;overflow:hidden;display:grid;place-items:center}
+.fly-img svg{width:80%}
+.js [data-reveal]{opacity:0;transform:translateY(46px)}
+.no-gsap [data-reveal]{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}body::after,.marquee-track,.plinth .garb,.sp-garb .garb,.scroll-cue i::after{animation:none!important}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body id="top">
+<script>document.body.classList.add('js')</script>
+<div id="prog" aria-hidden="true"></div>
+
+<div id="intro" aria-hidden="true">
+  <span class="intro-cap mono">NEXUS — ALGIERS · FW26</span>
+  <div class="rule"></div>
+  <div style="text-align:center"><div class="intro-word" id="introWord"></div><p class="intro-tag" data-i18n="hero_tag">BEYOND THE ORDINARY.</p></div>
+</div>
+
+<header id="header">
+  <div class="nav-wrap">
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#top" data-i18n="nav_home">HOME</a>
+      <a href="#shop" data-i18n="nav_shop">SHOP</a>
+      <a href="#collections" data-i18n="nav_collections">COLLECTIONS</a>
+      <a href="#showcase" data-i18n="nav_lookbook">SHOWCASE</a>
+      <a href="#story" data-i18n="nav_about">ABOUT</a>
+    </nav>
+    <a class="logo" href="#top" aria-label="NEXUS home">NEX<em>U</em>S</a>
+    <div class="nav-utils">
+      <div class="lang-cur" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="ar">ع</button></div>
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle theme"><svg class="ic-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg><svg class="ic-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg></button>
+      <button class="icon-btn" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+      <button class="icon-btn" id="wishBtn" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-9-9c-1.4-3.2.8-7 4.3-7 2 0 3.6 1.2 4.7 3 1.1-1.8 2.7-3 4.7-3 3.5 0 5.7 3.8 4.3 7-2 4.4-9 9-9 9z"/></svg><span class="count" id="wishCount">0</span></button>
+      <button class="icon-btn" id="bagBtn" aria-label="Bag"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8z"/><path d="M8.5 8V6.5a3.5 3.5 0 0 1 7 0V8"/></svg><span class="count" id="bagCount">0</span></button>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div id="menuOv" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#top"><i>01</i><span data-i18n="nav_home">HOME</span></a>
+    <a href="#shop"><i>02</i><span data-i18n="nav_shop">SHOP</span></a>
+    <a href="#collections"><i>03</i><span data-i18n="nav_collections">COLLECTIONS</span></a>
+    <a href="#showcase"><i>04</i><span data-i18n="nav_lookbook">SHOWCASE</span></a>
+    <a href="#story"><i>05</i><span data-i18n="nav_about">ABOUT</span></a>
+  </nav>
+  <div class="menu-foot"><span>ALGIERS — 36.75° N, 3.06° E</span><span data-i18n="hero_tag">BEYOND THE ORDINARY.</span></div>
+</div>
+
+<main>
+<!-- HERO -->
+<section id="hero" aria-label="NEXUS">
+  <h1 class="hero-word display" id="heroWord" aria-label="NEXUS">NEXUS</h1>
+  <span class="hero-side l mono">FW26 — CHAPTER 01</span>
+  <span class="hero-side r mono">ALGIERS — 36.75°N · 3.06°E</span>
+  <div class="stage" id="stage" tabindex="0" role="region" aria-label="Featured pieces">
+    <div class="st-glow" aria-hidden="true"></div>
+    <div class="stage-track" id="stageTrack"></div>
+    <button class="st-arrow prev" id="stPrev" aria-label="Previous piece">←</button>
+    <button class="st-arrow next" id="stNext" aria-label="Next piece">→</button>
+  </div>
+  <div class="hero-low">
+    <div class="hero-tag"><span class="serif-i" data-i18n="hero_tag">Beyond the ordinary.</span><span class="mono" data-i18n="hero_sub">WHERE IDENTITY MEETS MOVEMENT.</span></div>
+    <div class="hero-ctas"><a class="btn btn-solid" href="#shop" data-i18n="hero_cta1">SHOP THE COLLECTION</a><a class="btn btn-ghost" href="#showcase" data-i18n="hero_cta2">ENTER NEXUS</a></div>
+  </div>
+  <div class="hero-meta mono"><span class="scroll-cue"><i></i><span data-i18n="hero_scroll">SCROLL</span></span><span>FW26 — EDITORIAL N°01</span><span data-i18n="hero_made">DESIGNED IN ALGIERS</span></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="mqTrack"></div></div>
+
+<!-- SCROLL SCENES -->
+<section id="showcase">
+  <div class="sect" style="padding-bottom:0"><div class="wrap"><p class="eyebrow" data-reveal><span data-i18n="sh_eb">02 — THE PIECES</span></p>
+  <h2 class="display" style="font-size:clamp(44px,7vw,100px);margin-top:16px" data-reveal data-i18n="sh_title">THREE SCENES OF FORM</h2></div></div>
+  <div class="sh-pin" id="shPin"><div id="shScenes" style="position:absolute;inset:0"></div></div>
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections" class="sect">
+  <div class="wrap">
+    <div class="sect-head"><div><p class="eyebrow" data-reveal><span data-i18n="col_eb">03 — COLLECTIONS</span></p><h2 class="display" data-reveal data-i18n="col_title">THREE LANGUAGES OF FORM</h2></div>
+    <p class="serif-i" style="font-size:20px;max-width:300px" data-reveal data-i18n="col_sub">Each piece designed in Algiers, built for everywhere.</p></div>
+    <div class="col-grid" id="colGrid"></div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section id="shop" class="sect">
+  <div class="wrap">
+    <div class="sect-head"><div><p class="eyebrow" data-reveal><span data-i18n="shop_eb">04 — THE SHOP</span></p><h2 class="display" data-reveal data-i18n="shop_title">THE COLLECTION</h2></div></div>
+    <div class="toolbar" data-reveal><div class="pills" id="catPills" role="tablist"></div>
+    <div class="tool-right"><span class="mono results-n" id="resCount"></span><select class="sort" id="sortSel" aria-label="Sort"></select></div></div>
+    <div class="pgrid" id="pgrid"></div>
+  </div>
+</section>
+
+<!-- CAMPAIGN -->
+<section id="campaign" class="sect" style="padding-inline:0">
+  <div class="cp-pin" id="cpPin">
+    <div class="cp-glow" id="cpGlow"></div>
+    <h2 class="cp-word display"><span class="mask"><span data-line data-i18n="camp_l1">BEYOND</span></span><span class="mask"><span data-line class="hollow" data-i18n="camp_l2">THE ORDINARY.</span></span></h2>
+    <div class="cp-garb" id="cpGarb" aria-hidden="true"></div>
+    <div class="cp-cta" id="cpCta"><a href="#shop" class="btn btn-solid" data-i18n="camp_cta">EXPLORE THE PIECES</a></div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" class="sect">
+  <div class="wrap story-grid">
+    <div class="story-left">
+      <p class="eyebrow" data-reveal><span data-i18n="st_eb">05 — THE HOUSE</span></p>
+      <h2 class="display" style="margin-top:20px"><span class="mask"><span data-line data-i18n="st_l1">BORN IN</span></span><span class="mask"><span data-line data-i18n="st_l2">ALGIERS.</span></span></h2>
+      <span class="serif-i" data-reveal data-i18n="st_i">Made for everywhere.</span>
+      <div class="story-img" data-reveal id="storyImg"></div>
+    </div>
+    <div class="story-right">
+      <p data-reveal data-i18n="st_p1">NEXUS began with a refusal.</p>
+      <p data-reveal data-i18n="st_p2">Our vocabulary is drawn from the city itself.</p>
+      <p data-reveal data-i18n="st_p3">Identity is not static, so neither are we.</p>
+      <div class="stats" data-reveal><div><b>2024</b><span data-i18n="stat1">House founded — Algiers</span></div><div><b>58</b><span data-i18n="stat2">Wilayas delivered</span></div><div><b>N°01</b><span data-i18n="stat3">Chapter — Move Different</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sect">
+  <div class="wrap">
+    <div class="faq-word display" aria-hidden="true" data-i18n="fq_t">QUESTIONS</div>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join" class="sect">
+  <div class="wrap">
+    <span class="serif-i" data-reveal data-i18n="join_i">The next chapter drops soon.</span>
+    <h2 class="display" data-reveal data-i18n="join_t">JOIN THE <em>HOUSE.</em></h2>
+    <div data-reveal style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap"><a href="#shop" class="btn btn-solid" data-i18n="join_cta">SHOP FW26</a><a href="#contact" class="btn btn-ghost" data-i18n="ft_news_t">THE NEXUS LETTER</a></div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="foot-top">
+    <div class="news"><h4 data-i18n="ft_news_t">THE NEXUS LETTER</h4><p data-i18n="ft_news_sub">Chapters, drops and private previews.</p>
+      <form class="news-form" id="newsForm"><input type="email" id="newsEmail" data-i18n-ph="ft_news_ph" placeholder="your@email.com" aria-label="Email" required><button type="submit" data-i18n="ft_news_btn">SUBSCRIBE</button></form>
+      <div class="foot-selects"><select id="curSel" aria-label="Currency"><option value="DZD">DZD — DA</option><option value="EUR">EUR — €</option><option value="USD">USD — $</option></select><select id="langSel" aria-label="Language"><option value="en">ENGLISH</option><option value="fr">FRANÇAIS</option><option value="ar">العربية</option></select></div>
+    </div>
+    <div><h4 data-i18n="ft_shop">SHOP</h4><a href="#shop" data-i18n="f_tshirts">T-SHIRTS</a><a href="#shop" data-i18n="f_pants">PANTS</a><a href="#shop" data-i18n="f_acc">ACCESSORIES</a><a href="#showcase" data-i18n="ft_lookbook">SHOWCASE</a></div>
+    <div><h4 data-i18n="ft_help">HELP</h4><a href="#faq" data-i18n="ft_delivery">DELIVERY — 58 WILAYAS</a><a href="#faq" data-i18n="ft_cod">CASH ON DELIVERY</a><a href="#faq" data-i18n="ft_sizes">SIZE GUIDE</a><a href="#faq" data-i18n="ft_contact">CONTACT</a></div>
+    <div><h4 data-i18n="ft_house">HOUSE</h4><a href="#showcase" data-i18n="ft_manifesto">THE PIECES</a><a href="#story" data-i18n="ft_story">OUR STORY</a><a href="#campaign" data-i18n="ft_campaign">CAMPAIGN</a><a href="#top">INSTAGRAM ↗</a></div>
+  </div>
+  <div class="foot-word" aria-hidden="true">NEXUS</div>
+  <div class="foot-legal"><span>© 2026 NEXUS — ALGIERS, ALGERIA</span><span data-i18n="ft_rights">BEYOND THE ORDINARY.</span></div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Bag"><div class="drawer-head"><h3 data-i18n="bag_title">YOUR BAG</h3><button class="x-btn" data-close aria-label="Close">✕</button></div><div class="drawer-body" id="cartBody"></div><div class="drawer-foot" id="cartFoot"></div></aside>
+<aside class="drawer" id="wishDrawer" role="dialog" aria-modal="true" aria-label="Wishlist"><div class="drawer-head"><h3 data-i18n="wish_title">WISHLIST</h3><button class="x-btn" data-close aria-label="Close">✕</button></div><div class="drawer-body" id="wishBody"></div></aside>
+<div id="searchOv" role="dialog" aria-modal="true" aria-label="Search"><div class="s-top"><input id="searchInput" type="search" data-i18n-ph="sr_ph" placeholder="SEARCH NEXUS…" aria-label="Search"><button class="x-btn" id="searchClose" aria-label="Close">✕</button></div><div class="s-body"><div class="s-grid" id="sResults"></div></div></div>
+<div id="qvOv" role="dialog" aria-modal="true" aria-label="Product"><div class="scrim-in" data-close></div><div class="qv-panel" id="qvPanel"></div></div>
+<div id="coOv" role="dialog" aria-modal="true" aria-label="Checkout"><div class="co-wrap">
+  <button class="link-arrow" id="coBack" style="margin-bottom:26px">← <span data-i18n="co_back">CONTINUE SHOPPING</span></button>
+  <div class="co-grid"><div>
+    <h2 data-i18n="co_title">CHECKOUT</h2>
+    <p class="mono" style="color:var(--burnt);margin:-14px 0 30px" data-i18n="co_secure">CASH ON DELIVERY — ALL 58 WILAYAS</p>
+    <form id="coForm" novalidate>
+      <div class="field"><label for="fName" data-i18n="co_name">FULL NAME</label><input id="fName" autocomplete="name" required></div>
+      <div class="f-row"><div class="field"><label for="fPhone" data-i18n="co_phone">PHONE</label><div class="phone-wrap"><span class="prefix">+213</span><input id="fPhone" inputmode="tel" placeholder="5 55 55 55 55" required></div></div>
+      <div class="field"><label for="fEmail" data-i18n="co_email">EMAIL (OPTIONAL)</label><input id="fEmail" type="email"></div></div>
+      <div class="f-row"><div class="field"><label for="fWilaya" data-i18n="co_wilaya">WILAYA</label><select id="fWilaya" required></select></div>
+      <div class="field"><label for="fCommune" data-i18n="co_commune">COMMUNE</label><input id="fCommune" required></div></div>
+      <div class="field"><label for="fAddr" data-i18n="co_addr">FULL ADDRESS</label><input id="fAddr" required></div>
+      <div class="field"><label for="fNotes" data-i18n="co_notes">ORDER NOTES (OPTIONAL)</label><textarea id="fNotes"></textarea></div>
+      <label style="margin:26px 0 14px;display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700" data-i18n="co_pay">PAYMENT METHOD</label>
+      <div class="pay-opt on" tabindex="0"><span class="radio"></span><div><h5 data-i18n="co_cod">CASH ON DELIVERY — الدفع عند الاستلام</h5><p data-i18n="co_cod_note">Pay in cash at your door.</p></div></div>
+      <p class="co-err" id="coErr" data-i18n="co_err">Please complete the highlighted fields.</p>
+      <button type="submit" class="btn btn-solid" style="width:100%;margin-top:22px" data-i18n="co_place">CONFIRM ORDER</button>
+    </form></div>
+  <div class="co-summary"><h3 data-i18n="co_summary">ORDER SUMMARY</h3><div class="co-items" id="coItems"></div>
+    <div class="sum-row"><span data-i18n="bag_sub">SUBTOTAL</span><b id="coSub"></b></div>
+    <div class="sum-row"><span data-i18n="co_deliv">DELIVERY</span><b id="coShip">—</b></div>
+    <div class="sum-row total"><span data-i18n="co_total">TOTAL</span><b id="coTotal"></b></div>
+    <p class="co-note" id="coEta"></p></div></div></div></div>
+<div id="okOv" role="dialog" aria-modal="true"><div class="ok-card"><div class="ok-ring">✳</div><h2 data-i18n="ok_t">ORDER CONFIRMED</h2><div class="ok-code" id="okCode"></div><p id="okMsg"></p><div class="ok-eta"><span data-i18n="ok_eta">DELIVERY ESTIMATE</span> · <b id="okDays"></b></div><br><button class="btn btn-solid" id="okClose" data-i18n="ok_cta">CONTINUE SHOPPING</button></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ========== CORE ========== */
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const HAS_GSAP=typeof gsap!=='undefined';
+if(!HAS_GSAP)document.body.classList.add('no-gsap');
+const TOUCH=matchMedia('(hover: none)').matches;
+const WILAYAS=[["01","Adrar","أدرار"],["02","Chlef","الشلف"],["03","Laghouat","الأغواط"],["04","Oum El Bouaghi","أم البواقي"],["05","Batna","باتنة"],["06","Béjaïa","بجاية"],["07","Biskra","بسكرة"],["08","Béchar","بشار"],["09","Blida","البليدة"],["10","Bouira","البويرة"],["11","Tamanrasset","تمنراست"],["12","Tébessa","تبسة"],["13","Tlemcen","تلمسان"],["14","Tiaret","تيارت"],["15","Tizi Ouzou","تيزي وزو"],["16","Algiers","الجزائر"],["17","Djelfa","الجلفة"],["18","Jijel","جيجل"],["19","Sétif","سطيف"],["20","Saïda","سعيدة"],["21","Skikda","سكيكدة"],["22","Sidi Bel Abbès","سيدي بلعباس"],["23","Annaba","عنابة"],["24","Guelma","قالمة"],["25","Constantine","قسنطينة"],["26","Médéa","المدية"],["27","Mostaganem","مستغانم"],["28","M'Sila","المسيلة"],["29","Mascara","معسكر"],["30","Ouargla","ورقلة"],["31","Oran","وهران"],["32","El Bayadh","البيض"],["33","Illizi","إليزي"],["34","Bordj Bou Arréridj","برج بوعريريج"],["35","Boumerdès","بومرداس"],["36","El Tarf","الطارف"],["37","Tindouf","تندوف"],["38","Tissemsilt","تيسمسيلت"],["39","El Oued","الوادي"],["40","Khenchela","خنشلة"],["41","Souk Ahras","سوق أهراس"],["42","Tipaza","تيبازة"],["43","Mila","ميلة"],["44","Aïn Defla","عين الدفلى"],["45","Naâma","النعامة"],["46","Aïn Témouchent","عين تموشنت"],["47","Ghardaïa","غرداية"],["48","Relizane","غليزان"],["49","Timimoun","تيميمون"],["50","Bordj Badji Mokhtar","برج باجي مختار"],["51","Ouled Djellal","أولاد جلال"],["52","Béni Abbès","بني عباس"],["53","In Salah","عين صالح"],["54","In Guezzam","عين قزام"],["55","Touggourt","تقرت"],["56","Djanet","جانت"],["57","El M'Ghair","المغير"],["58","El Meniaa","المنيعة"]];
+const REMOTE_W=["01","11","33","37","49","50","52","53","54","56"];
+const SHIP={base:700,remote:1400,freeOver:20000};
+const CUR={DZD:{r:1,before:false,sym:" DA"},EUR:{r:1/145,before:true,sym:"€"},USD:{r:1/134,before:true,sym:"$"}};
+const money=dzd=>{const c=CUR[state.cur],v=Math.round(dzd*c.r);const n=new Intl.NumberFormat(state.cur==='DZD'?'fr-FR':'en').format(v);return c.before?c.sym+n:n+c.sym;};
+const P=(id,name,cat,type,price,colors,sizes,stock,badge,fabric,fit)=>({id,name,cat,type,price,colors,sizes,stock,badge,fabric,fit});
+const PRODUCTS=[
+ P("NX-01","ATLAS OVERSIZED TEE","tshirts","teewide",6900,[["Ecru","#EDE6D6"],["Deep Navy","#22405A"],["Sage","#87947A"]],["XS","S","M","L","XL"],14,"new","Organic cotton — 240 gsm","Dropped shoulder · boxy"),
+ P("NX-02","CASBAH GRAPHIC TEE","tshirts","tee",7500,[["Ivory","#F1EBDD"],["Burnt Clay","#C05B2E"]],["XS","S","M","L","XL"],9,null,"Combed cotton — 200 gsm","Regular"),
+ P("NX-03","SAHARA HEAVY TEE","tshirts","tee",7200,[["Desert Sand","#D9CDB4"],["Deep Navy","#22405A"]],["S","M","L","XL"],6,"new","Heavy jersey — 260 gsm","Relaxed"),
+ P("NX-04","MEDITERRANEAN BOXY TEE","tshirts","tee",6500,[["Sage","#87947A"],["Ecru","#EDE6D6"]],["XS","S","M","L","XL"],0,null,"Airy cotton — 180 gsm","Boxy"),
+ P("NX-05","DUNE WIDE-TROUSER","pants","pantwide",12800,[["Ecru","#EDE6D6"],["Deep Navy","#22405A"]],["28","30","32","34","36"],8,"new","Cotton twill — 300 gsm","Wide leg · high rise"),
+ P("NX-06","AURÈS CARGO PANT","pants","cargo",14500,[["Olive","#6B7259"],["Deep Navy","#22405A"]],["28","30","32","34","36"],11,null,"Ripstop cotton","Utility"),
+ P("NX-07","ALGIERS PLEATED PANT","pants","pleat",13900,[["Soft Sand","#D9CDB4"],["Slate Blue","#3E4E5C"]],["28","30","32","34","36"],7,null,"Wool-blend","Double pleat"),
+ P("NX-08","HOGGAR UTILITY PANT","pants","pant",13200,[["Deep Navy","#22405A"],["Clay","#A9673F"]],["28","30","32","34","36"],12,null,"Garment-dyed canvas","Straight"),
+ P("NX-09","ZIBAN 6-PANEL CAP","acc","cap",4200,[["Deep Navy","#22405A"],["Sage","#87947A"],["Ecru","#EDE6D6"]],["ONE SIZE"],20,null,"Brushed cotton","Adjustable"),
+ P("NX-10","TASSILI CANVAS TOTE","acc","tote",5800,[["Ecru","#EDE6D6"],["Burnt Clay","#C05B2E"]],["ONE SIZE"],16,"new","Canvas — 340 gsm","Interior pocket"),
+ P("NX-11","SIROCCO GAUZE SCARF","acc","scarf",6400,[["Sage","#87947A"],["Desert Sand","#D9CDB4"]],["ONE SIZE"],2,null,"Cotton gauze","Fringed"),
+ P("NX-12","CONSTANTINE BELT BAG","acc","beltbag",7900,[["Deep Navy","#22405A"],["Olive","#6B7259"]],["ONE SIZE"],10,null,"Coated canvas","2L")];
+const DESCS={"NX-01":{en:"An oversized tee cut from heavy organic cotton. Dropped shoulders, a clean chest, zero noise.",fr:"Tee oversize en coton bio lourd. Épaules tombées, zéro bruit.",ar:"تيشيرت واسع من قطن عضوي ثقيل. أكتاف منسدلة وبلا ضجيج."},"NX-02":{en:"A single line print honoring the stairways of old Algiers.",fr:"Un imprimé ligne unique en hommage aux escaliers du vieil Alger.",ar:"طبعة بخط واحد تحية لسلالم الجزائر القديمة."},"NX-03":{en:"260 gsm of desert-weight jersey. Built to keep its shape.",fr:"Jersey 260 gsm poids désert. Garde sa forme.",ar:"جيرسيه ثقيل 260 غم يحافظ على قصّته."},"NX-04":{en:"A boxy silhouette in airy cotton, dyed to the green of the Sahel hills.",fr:"Silhouette boxy en coton aérien, teinte au vert du Sahel.",ar:"قصة واسعة من قطن خفيف بلون تلال الساحل."},"NX-05":{en:"Wide-leg trousers, high rise, floor-skimming hem. Movement, architected.",fr:"Pantalon large taille haute. Le mouvement, architecturé.",ar:"بنطال واسع بخصر مرتفع. حركة بهندسة دقيقة."},"NX-06":{en:"Ripstop cargo built for the Aurès wind. Six pockets, zero compromise.",fr:"Cargo ripstop pour le vent des Aurès. Six poches.",ar:"كارغو مقاوم للتمزق لريح الأوراس."},"NX-07":{en:"Double pleats in a wool blend. Quiet formality.",fr:"Double plis en laine. Formalité silencieuse.",ar:"ثنيات مزدوجة في صوف هادئ."},"NX-08":{en:"Garment-dyed canvas. Each pair ages into its own map of the city.",fr:"Canvas teint en pièce. Vieillit comme une carte de la ville.",ar:"كانفاس مصبوغ يشيخ كخريطة المدينة."},"NX-09":{en:"Six-panel brushed cotton cap with an embroidered N.",fr:"Casquette 6 panneaux, N brodé.",ar:"قبعة ست قطع بحرف N مطرز."},"NX-10":{en:"340 gsm canvas tote with reinforced handles.",fr:"Tote canvas 340 gsm, anses renforcées.",ar:"حقيبة كانفاس بمقابض معززة."},"NX-11":{en:"Cotton gauze scarf — the sirocco, rendered wearable.",fr:"Écharpe en gaze de coton — le sirocco portable.",ar:"وشاح شاش قطن — السيروكو يُلبس."},"NX-12":{en:"Coated canvas belt bag, hands-free from the Casbah to the corniche.",fr:"Banane canvas enduit, mains libres.",ar:"حقيبة خصر، يداك حرتان."}};
+const I18N={
+en:{nav_home:"HOME",nav_shop:"SHOP",nav_collections:"COLLECTIONS",nav_lookbook:"SHOWCASE",nav_about:"ABOUT",hero_tag:"Beyond the ordinary.",hero_sub:"WHERE IDENTITY MEETS MOVEMENT.",hero_cta1:"SHOP THE COLLECTION",hero_cta2:"ENTER NEXUS",hero_scroll:"SCROLL",hero_made:"DESIGNED IN ALGIERS",
+sh_eb:"02 — THE PIECES",sh_title:"THREE SCENES OF FORM",view_piece:"VIEW PIECE",
+col_eb:"03 — COLLECTIONS",col_title:"THREE LANGUAGES OF FORM",col_sub:"Each piece designed in Algiers, built for everywhere.",pieces:"PIECES",
+shop_eb:"04 — THE SHOP",shop_title:"THE COLLECTION",f_all:"ALL",f_tshirts:"T-SHIRTS",f_pants:"PANTS",f_acc:"ACCESSORIES",sort_f:"FEATURED",sort_n:"NEWEST",sort_a:"PRICE ↑",sort_d:"PRICE ↓",results:"{n} PIECES",qv:"QUICK VIEW",add:"ADD TO BAG",sold:"SOLD OUT",low:"ONLY {n} LEFT",new_l:"NEW",
+camp_l1:"BEYOND",camp_l2:"THE ORDINARY.",camp_cta:"EXPLORE THE PIECES",
+st_eb:"05 — THE HOUSE",st_l1:"BORN IN",st_l2:"ALGIERS.",st_i:"Made for everywhere.",st_p1:"NEXUS began with a refusal: that premium fashion had to be imported to be believed. Algeria has light, geometry, rhythm and memory — everything a modern house needs. We cut our first patterns in Algiers in 2024 and have not looked away since.",st_p2:"Our vocabulary is drawn from the city itself — the white terraces, the deep blue of the Mediterranean at dusk, the olive of the hills, the burnt clay of the south. Every garment is an edit: remove until only identity remains.",st_p3:"Identity is not static, so neither are we. NEXUS is where heritage meets movement — delivered to all 58 wilayas, worn beyond the ordinary.",stat1:"House founded — Algiers",stat2:"Wilayas delivered",stat3:"Chapter — Move Different",
+fq_t:"QUESTIONS",fq1q:"How fast is delivery?",fq1a:"2–4 days across the north, 5–8 days for the south. All 58 wilayas.",fq2q:"How do I pay?",fq2a:"Cash on delivery only. You pay when the piece is in your hands.",fq3q:"Which size should I take?",fq3a:"Our cuts are true to size. Between two sizes? Take the larger one for the intended drape.",fq4q:"Can I return a piece?",fq4a:"Within 7 days, unworn with tags. We exchange or refund on the spot.",fq5q:"What are the fabrics?",fq5a:"Organic cottons 180–340 gsm, wool blends and coated canvas — garment-dyed in small batches.",fq6q:"How do I reach the house?",fq6a:"Instagram @nexus.dz or WhatsApp — the number appears on your order confirmation.",
+join_i:"The next chapter drops soon.",join_t:"JOIN THE <em>HOUSE.</em>",join_cta:"SHOP FW26",
+ft_news_t:"THE NEXUS LETTER",ft_news_sub:"Chapters, drops and private previews.",ft_news_ph:"your@email.com",ft_news_btn:"SUBSCRIBE",ft_news_ok:"Welcome to the house.",ft_shop:"SHOP",ft_lookbook:"SHOWCASE",ft_help:"HELP",ft_delivery:"DELIVERY — 58 WILAYAS",ft_cod:"CASH ON DELIVERY",ft_sizes:"SIZE GUIDE",ft_contact:"CONTACT",ft_house:"HOUSE",ft_manifesto:"THE PIECES",ft_story:"OUR STORY",ft_campaign:"CAMPAIGN",ft_rights:"BEYOND THE ORDINARY.",
+bag_title:"YOUR BAG",bag_empty_t:"Your bag is empty.",bag_empty_s:"The collection is waiting.",bag_cta:"SHOP THE COLLECTION",bag_sub:"SUBTOTAL",bag_free:"Complimentary delivery over {p}",bag_free_ok:"Complimentary delivery ✳",bag_co:"CHECKOUT",bag_rm:"REMOVE",
+wish_title:"WISHLIST",wish_empty_t:"Nothing saved yet.",wish_empty_s:"Tap the heart on any piece you love.",wish_move:"ADD TO BAG",
+sr_ph:"SEARCH NEXUS…",sr_empty:"No pieces found.",
+co_title:"CHECKOUT",co_secure:"CASH ON DELIVERY — ALL 58 WILAYAS",co_back:"CONTINUE SHOPPING",co_name:"FULL NAME",co_phone:"PHONE",co_email:"EMAIL (OPTIONAL)",co_wilaya:"WILAYA",co_sel_w:"Select your wilaya",co_commune:"COMMUNE",co_addr:"FULL ADDRESS",co_notes:"ORDER NOTES (OPTIONAL)",co_pay:"PAYMENT METHOD",co_cod:"CASH ON DELIVERY — الدفع عند الاستلام",co_cod_note:"Pay in cash at your door.",co_summary:"ORDER SUMMARY",co_deliv:"DELIVERY",co_free:"FREE",co_total:"TOTAL",co_place:"CONFIRM ORDER",co_err:"Please complete the highlighted fields.",co_eta:"Estimated delivery: {d}",co_days:"2–4 days",co_days_r:"5–8 days",
+ok_t:"ORDER CONFIRMED",ok_msg:"We will call you on +213 {p} to confirm. Pay in cash on delivery.",ok_eta:"DELIVERY ESTIMATE",ok_cta:"CONTINUE SHOPPING",
+qv_fabric:"FABRIC",qv_fit:"FIT",qv_sku:"SKU",qv_made:"Designed in Algiers. Crafted for movement.",qv_stock:"IN STOCK — ships within 48h",qv_size:"SIZE",qv_color:"COLOR",qv_buy:"BUY NOW",qv_size_err:"Select a size",
+toast_add:"Added to bag",toast_wish:"Saved to wishlist",toast_wish_rm:"Removed from wishlist",size:"Size"},
+fr:{nav_home:"ACCUEIL",nav_shop:"BOUTIQUE",nav_collections:"COLLECTIONS",nav_lookbook:"SHOWCASE",nav_about:"MAISON",hero_tag:"Au-delà de l'ordinaire.",hero_sub:"OÙ L'IDENTITÉ RENCONTRE LE MOUVEMENT.",hero_cta1:"DÉCOUVRIR LA COLLECTION",hero_cta2:"ENTRER DANS NEXUS",hero_scroll:"DÉFILER",hero_made:"CONÇU À ALGER",
+sh_eb:"02 — LES PIÈCES",sh_title:"TROIS SCÈNES DE FORME",view_piece:"VOIR LA PIÈCE",
+col_eb:"03 — COLLECTIONS",col_title:"TROIS LANGAGES DE LA FORME",col_sub:"Chaque pièce conçue à Alger, pensée pour partout.",pieces:"PIÈCES",
+shop_eb:"04 — LA BOUTIQUE",shop_title:"LA COLLECTION",f_all:"TOUT",f_tshirts:"T-SHIRTS",f_pants:"PANTALONS",f_acc:"ACCESSOIRES",sort_f:"EN VEDETTE",sort_n:"NOUVEAUTÉS",sort_a:"PRIX ↑",sort_d:"PRIX ↓",results:"{n} PIÈCES",qv:"APERÇU",add:"AJOUTER AU PANIER",sold:"ÉPUISÉ",low:"PLUS QUE {n}",new_l:"NOUVEAU",
+camp_l1:"AU-DELÀ",camp_l2:"DE L'ORDINAIRE.",camp_cta:"DÉCOUVRIR LES PIÈCES",
+st_eb:"05 — LA MAISON",st_l1:"NÉE À",st_l2:"ALGER.",st_i:"Faite pour partout.",st_p1:"NEXUS est née d'un refus : croire que la mode premium doit être importée pour exister. L'Algérie a la lumière, la géométrie, le rythme et la mémoire. Nos premiers patrons ont été coupés à Alger en 2024.",st_p2:"Notre vocabulaire vient de la ville — les terrasses blanches, le bleu profond de la Méditerranée au crépuscule, l'olive des collines, l'argile brûlée du sud. Chaque vêtement est un montage : retirer jusqu'à ce qu'il ne reste que l'identité.",st_p3:"L'identité n'est pas statique, nous non plus. NEXUS est le lieu où l'héritage rencontre le mouvement — livré dans les 58 wilayas.",stat1:"Maison fondée — Alger",stat2:"Wilayas livrées",stat3:"Chapitre — Move Different",
+fq_t:"QUESTIONS",fq1q:"Quelle est la rapidité de livraison ?",fq1a:"2–4 jours au nord, 5–8 jours au sud. Les 58 wilayas.",fq2q:"Comment payer ?",fq2a:"Paiement à la livraison uniquement. Vous payez quand la pièce est entre vos mains.",fq3q:"Quelle taille choisir ?",fq3a:"Nos coupes taillent juste. Entre deux tailles ? Prenez la plus grande pour le tombé voulu.",fq4q:"Puis-je retourner une pièce ?",fq4a:"Sous 7 jours, non portée avec étiquettes. Échange ou remboursement immédiat.",fq5q:"Quels tissus ?",fq5a:"Cotons bio 180–340 gsm, mélanges laine, canvas enduit — teints en petites séries.",fq6q:"Comment joindre la maison ?",fq6a:"Instagram @nexus.dz ou WhatsApp — le numéro figure sur votre confirmation.",
+join_i:"Le prochain chapitre arrive.",join_t:"REJOIGNEZ LA <em>MAISON.</em>",join_cta:"SHOP FW26",
+ft_news_t:"LA LETTRE NEXUS",ft_news_sub:"Chapitres, sorties et aperçus privés.",ft_news_ph:"votre@email.com",ft_news_btn:"S'ABONNER",ft_news_ok:"Bienvenue dans la maison.",ft_shop:"BOUTIQUE",ft_lookbook:"SHOWCASE",ft_help:"AIDE",ft_delivery:"LIVRAISON — 58 WILAYAS",ft_cod:"PAIEMENT À LA LIVRAISON",ft_sizes:"GUIDE DES TAILLES",ft_contact:"CONTACT",ft_house:"MAISON",ft_manifesto:"LES PIÈCES",ft_story:"NOTRE HISTOIRE",ft_campaign:"CAMPAGNE",ft_rights:"AU-DELÀ DE L'ORDINAIRE.",
+bag_title:"VOTRE PANIER",bag_empty_t:"Votre panier est vide.",bag_empty_s:"La collection vous attend.",bag_cta:"DÉCOUVRIR LA COLLECTION",bag_sub:"SOUS-TOTAL",bag_free:"Livraison offerte dès {p}",bag_free_ok:"Livraison offerte ✳",bag_co:"PASSER COMMANDE",bag_rm:"RETIRER",
+wish_title:"FAVORIS",wish_empty_t:"Rien d'enregistré.",wish_empty_s:"Touchez le cœur des pièces aimées.",wish_move:"AJOUTER AU PANIER",
+sr_ph:"RECHERCHER…",sr_empty:"Aucune pièce trouvée.",
+co_title:"COMMANDE",co_secure:"PAIEMENT À LA LIVRAISON — 58 WILAYAS",co_back:"CONTINUER",co_name:"NOM COMPLET",co_phone:"TÉLÉPHONE",co_email:"EMAIL (FACULTATIF)",co_wilaya:"WILAYA",co_sel_w:"Choisissez votre wilaya",co_commune:"COMMUNE",co_addr:"ADRESSE COMPLÈTE",co_notes:"NOTES (FACULTATIF)",co_pay:"MODE DE PAIEMENT",co_cod:"PAIEMENT À LA LIVRAISON — الدفع عند الاستلام",co_cod_note:"Payez en espèces à la réception.",co_summary:"RÉSUMÉ",co_deliv:"LIVRAISON",co_free:"OFFERTE",co_total:"TOTAL",co_place:"CONFIRMER",co_err:"Merci de compléter les champs.",co_eta:"Livraison estimée : {d}",co_days:"2–4 jours",co_days_r:"5–8 jours",
+ok_t:"COMMANDE CONFIRMÉE",ok_msg:"Nous vous appellerons au +213 {p}. Paiement à la livraison.",ok_eta:"LIVRAISON ESTIMÉE",ok_cta:"CONTINUER",
+qv_fabric:"TISSU",qv_fit:"COUPE",qv_sku:"RÉF.",qv_made:"Conçu à Alger. Taillé pour le mouvement.",qv_stock:"EN STOCK — 48h",qv_size:"TAILLE",qv_color:"COULEUR",qv_buy:"ACHETER",qv_size_err:"Choisissez une taille",
+toast_add:"Ajouté au panier",toast_wish:"Ajouté aux favoris",toast_wish_rm:"Retiré des favoris",size:"Taille"},
+ar:{nav_home:"الرئيسية",nav_shop:"المتجر",nav_collections:"المجموعات",nav_lookbook:"العرض",nav_about:"الدار",hero_tag:"ما وراء العادي.",hero_sub:"حيث تلتقي الهوية بالحركة.",hero_cta1:"تسوّق المجموعة",hero_cta2:"ادخل عالم نكسس",hero_scroll:"مرّر",hero_made:"صُمّم في الجزائر",
+sh_eb:"٠٢ — القطع",sh_title:"ثلاثة مشاهد للشكل",view_piece:"شاهد القطعة",
+col_eb:"٠٣ — المجموعات",col_title:"ثلاث لغات للشكل",col_sub:"كل قطعة صُممت في الجزائر لكل مكان.",pieces:"قطعة",
+shop_eb:"٠٤ — المتجر",shop_title:"المجموعة",f_all:"الكل",f_tshirts:"تيشيرتات",f_pants:"بناطيل",f_acc:"إكسسوارات",sort_f:"مميّز",sort_n:"الأحدث",sort_a:"السعر ↑",sort_d:"السعر ↓",results:"{n} قطعة",qv:"عرض سريع",add:"أضف إلى السلة",sold:"نفدت",low:"بقي {n} فقط",new_l:"جديد",
+camp_l1:"ما وراء",camp_l2:"العادي.",camp_cta:"استكشف القطع",
+st_eb:"٠٥ — الدار",st_l1:"وُلدت في",st_l2:"الجزائر.",st_i:"صُنعت لكل مكان.",st_p1:"بدأت نكسس برفض: رفض فكرة أن الموضة الفاخرة تُستورد لتُصدَّق. الجزائر فيها الضوء والهندسة والإيقاع والذاكرة. قصصنا أول باتروناتنا في الجزائر عام ٢٠٢٤.",st_p2:"مفرداتنا من المدينة — الشرفات البيضاء، أزرق المتوسط عند الغروب، زيتوني التلال، وطين الجنوب. كل قطعة تحرير: احذف حتى تبقى الهوية وحدها.",st_p3:"الهوية ليست ثابتة وكذلك نحن. نكسس حيث يلتقي الإرث بالحركة — توصيل إلى ٥٨ ولاية.",stat1:"تأسيس الدار — الجزائر",stat2:"ولاية نوصل إليها",stat3:"الفصل — تحرّك مختلفاً",
+fq_t:"أسئلة",fq1q:"ما سرعة التوصيل؟",fq1a:"٢–٤ أيام شمالاً، ٥–٨ أيام جنوباً. كل الولايات الـ٥٨.",fq2q:"كيف أدفع؟",fq2a:"الدفع عند الاستلام فقط. تدفع والقطعة بين يديك.",fq3q:"أي مقاس أختار؟",fq3a:"قصّاتنا مضبوطة. بين مقاسين؟ خذ الأكبر للانسدال المقصود.",fq4q:"هل يمكن الإرجاع؟",fq4a:"خلال ٧ أيام، غير ملبوسة وبالبطاقات. استبدال أو استرداد فوري.",fq5q:"ما الأقمشة؟",fq5a:"أقطان عضوية ١٨٠–٣٤٠ غم، مزيج صوف، وكانفاس مطلي — صباغة بدفعات صغيرة.",fq6q:"كيف أصل إلى الدار؟",fq6a:"إنستغرام @nexus.dz أو واتساب — الرقم يظهر في تأكيد طلبك.",
+join_i:"الفصل القادم قريباً.",join_t:"انضم إلى <em>الدار.</em>",join_cta:"تسوّق FW26",
+ft_news_t:"رسالة نكسس",ft_news_sub:"فصول وإصدارات ومعاينات خاصة.",ft_news_ph:"بريدك الإلكتروني",ft_news_btn:"اشترك",ft_news_ok:"مرحباً بك في الدار.",ft_shop:"المتجر",ft_lookbook:"العرض",ft_help:"مساعدة",ft_delivery:"التوصيل — ٥٨ ولاية",ft_cod:"الدفع عند الاستلام",ft_sizes:"دليل المقاسات",ft_contact:"اتصل بنا",ft_house:"الدار",ft_manifesto:"القطع",ft_story:"قصتنا",ft_campaign:"الحملة",ft_rights:"ما وراء العادي.",
+bag_title:"سلتك",bag_empty_t:"سلتك فارغة.",bag_empty_s:"المجموعة بانتظارك.",bag_cta:"تسوّق المجموعة",bag_sub:"المجموع الفرعي",bag_free:"توصيل مجاني فوق {p}",bag_free_ok:"توصيل مجاني ✳",bag_co:"إتمام الطلب",bag_rm:"إزالة",
+wish_title:"المفضلة",wish_empty_t:"لا شيء محفوظ.",wish_empty_s:"اضغط القلب على أي قطعة.",wish_move:"أضف إلى السلة",
+sr_ph:"ابحث في نكسس…",sr_empty:"لا نتائج.",
+co_title:"إتمام الطلب",co_secure:"الدفع عند الاستلام — ٥٨ ولاية",co_back:"مواصلة التسوق",co_name:"الاسم الكامل",co_phone:"الهاتف",co_email:"البريد (اختياري)",co_wilaya:"الولاية",co_sel_w:"اختر ولايتك",co_commune:"البلدية",co_addr:"العنوان الكامل",co_notes:"ملاحظات (اختياري)",co_pay:"طريقة الدفع",co_cod:"الدفع عند الاستلام — Cash on delivery",co_cod_note:"ادفع نقداً عند بابك.",co_summary:"ملخص الطلب",co_deliv:"التوصيل",co_free:"مجاني",co_total:"الإجمالي",co_place:"تأكيد الطلب",co_err:"أكمل الحقول المحددة.",co_eta:"التوصيل المتوقع: {d}",co_days:"٢–٤ أيام",co_days_r:"٥–٨ أيام",
+ok_t:"تم تأكيد الطلب",ok_msg:"سنتصل بك على {p} +٢١٣. الدفع نقداً عند الاستلام.",ok_eta:"التوصيل المتوقع",ok_cta:"مواصلة التسوق",
+qv_fabric:"القماش",qv_fit:"القصة",qv_sku:"الرمز",qv_made:"صُمّم في الجزائر. صُنع للحركة.",qv_stock:"متوفر — ٤٨ ساعة",qv_size:"المقاس",qv_color:"اللون",qv_buy:"اشترِ الآن",qv_size_err:"اختر مقاساً",
+toast_add:"أُضيف إلى السلة",toast_wish:"حُفظ في المفضلة",toast_wish_rm:"أُزيل من المفضلة",size:"المقاس"}};
+const store={get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set:(k,v)=>localStorage.setItem(k,JSON.stringify(v))};
+const state={lang:store.get('nx_lang','en'),cur:store.get('nx_cur','DZD'),cart:store.get('nx_cart',[]),wish:store.get('nx_wish',[]),theme:document.documentElement.dataset.theme||'dark',filter:'all',sort:'featured'};
+const t=k=>(I18N[state.lang]&&I18N[state.lang][k])??I18N.en[k]??k;
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const byId=id=>PRODUCTS.find(p=>p.id===id);
+const catBG=()=>state.theme==='dark'?{tshirts:"#182634",pants:"#16222E",acc:"#1A2733"}:{tshirts:"#E4DCCA",pants:"#E9E2D2",acc:"#E3E1D6"};
+const ph=(id,alt,w)=>`<img class="ph" loading="lazy" src="https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=75" alt="${alt}" onerror="this.remove()">`;
+/* ========== GARMENT ENGINE ========== */
+let UID=0;
+function garmentSVG(p,cIdx=0,view="front"){
+ const hex=p.colors[cIdx]?.[1]||"#DDD",id="g"+(++UID),dk=state.theme==='dark'?'rgba(0,0,0,.22)':'rgba(15,22,34,.10)',lt='rgba(255,255,255,.2)';
+ const inkA=a=>state.theme==='dark'?`rgba(242,238,227,${a})`:`rgba(22,42,61,${a})`,ink=inkA(.3),st=inkA(.38);
+ let body="",extra="";const T=p.type;
+ if(T==="tee"||T==="teewide"){const w=T==="teewide";
+  body=w?"M58 46 C72 60 128 60 142 46 L176 62 L190 104 L158 116 L152 100 L152 206 L48 206 L48 100 L42 116 L10 104 L24 62 Z":"M62 46 C74 58 126 58 138 46 L168 60 L184 98 L154 112 L147 95 L147 202 L53 202 L53 95 L46 112 L16 98 L32 60 Z";
+  const hy=w?206:202,a=w?48:53,b=w?152:147;
+  const col=view==="back"?(w?"M58 46 C80 54 120 54 142 46":"M62 46 C80 52 120 52 138 46"):(w?"M58 46 C72 60 128 60 142 46":"M62 46 C74 58 126 58 138 46");
+  extra=`<path d="${col}" fill="none" stroke="${st}" stroke-width="2.4"/><path d="M${a} ${hy-7} H${b}" stroke="${st}" stroke-width="1.4" stroke-dasharray="4 4" fill="none"/>${view==="front"?`<rect x="92" y="122" width="16" height="9" fill="rgba(245,241,232,.9)" stroke="${ink}" stroke-width=".8"/>`:''}`;
+ }else if(T==="pant"||T==="pantwide"||T==="pleat"||T==="cargo"){
+  body=(T==="pantwide"||T==="pleat")?"M60 34 L140 34 L150 84 L164 214 L104 214 L100 100 L96 214 L36 214 L50 84 Z":"M64 34 L136 34 L146 82 L152 212 L108 212 L100 106 L92 212 L48 212 L54 82 Z";
+  extra=`<path d="M62 48 H138" stroke="${st}" stroke-width="2"/><path d="M74 62 L66 200 M126 62 L134 200" stroke="${dk}" stroke-width="2.4" fill="none"/>`;
+  if(T==="pleat")extra+=`<path d="M84 52 L80 200 M116 52 L120 200" stroke="${ink}" stroke-width="1.6" fill="none"/>`;
+  if(T==="cargo")extra+=`<rect x="52" y="120" width="32" height="36" fill="${hex}" stroke="${st}" stroke-width="1.6"/><rect x="116" y="120" width="32" height="36" fill="${hex}" stroke="${st}" stroke-width="1.6"/>`;
+ }else if(T==="cap"){body="M36 128 C36 84 64 56 100 56 C136 56 164 84 164 128 L164 134 L36 134 Z";
+  extra=`<path d="M36 130 C70 118 130 118 164 130 L178 143 C120 127 80 127 22 143 Z" fill="${hex}" stroke="${ink}" stroke-width="1.4"/><circle cx="100" cy="58" r="3.4" fill="${hex}" stroke="${ink}" stroke-width="1.2"/><text x="100" y="106" font-family="Anton" font-size="17" fill="rgba(245,241,232,.95)" text-anchor="middle">N</text>`;
+ }else if(T==="tote"){body="M46 92 L154 92 L161 206 L39 206 Z";
+  extra=`<path d="M70 92 C70 58 130 58 130 92" fill="none" stroke="${hex}" stroke-width="8"/><rect x="84" y="138" width="32" height="18" fill="rgba(245,241,232,.92)" stroke="${ink}"/><text x="100" y="151" font-family="Anton" font-size="11" fill="#162A3D" text-anchor="middle">NEXUS</text>`;
+ }else if(T==="scarf"){body="M72 36 L128 36 C146 92 138 152 126 206 L74 206 C62 152 54 92 72 36 Z";
+  extra=`<path d="M66 84 C90 92 110 92 134 84 M64 122 C90 130 110 130 136 122" stroke="${dk}" stroke-width="3" fill="none"/>${[78,90,102,114].map(x=>`<path d="M${x} 206 v13" stroke="${ink}" stroke-width="1.6"/>`).join('')}`;
+ }else{extra=`<path d="M16 118 C60 92 140 92 184 118" fill="none" stroke="${hex}" stroke-width="9"/><rect x="92" y="94" width="16" height="12" rx="2" fill="rgba(245,241,232,.9)" stroke="${ink}"/>`;
+  body="M46 104 h108 a26 26 0 0 1 26 26 v12 a26 26 0 0 1 -26 26 h-108 a26 26 0 0 1 -26 -26 v-12 a26 26 0 0 1 26 -26 Z";
+  extra+=`<text x="100" y="152" font-family="Anton" font-size="12" fill="rgba(245,241,232,.9)" text-anchor="middle" letter-spacing="3">NEXUS</text>`;}
+ return `<svg viewBox="0 0 200 240" role="img" aria-label="${p.name}" xmlns="http://www.w3.org/2000/svg"><ellipse cx="100" cy="222" rx="58" ry="8" fill="${state.theme==='dark'?'rgba(0,0,0,.35)':'rgba(22,42,61,.1)'}"/><clipPath id="${id}c"><path d="${body}"/></clipPath><path d="${body}" fill="${hex}" stroke="${ink}" stroke-width="1.6"/><rect x="100" y="20" width="100" height="210" fill="${dk}" clip-path="url(#${id}c)"/><rect x="10" y="20" width="36" height="210" fill="${lt}" clip-path="url(#${id}c)"/>${extra}</svg>`;
+}
+function fabricSVG(hex){const id="f"+(++UID),l=state.theme==='dark'?'rgba(242,238,227,.12)':'rgba(22,42,61,.1)';return `<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="${id}" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 9 L9 0" stroke="${l}"/></pattern></defs><rect width="200" height="240" fill="${hex}"/><rect width="200" height="240" fill="url(#${id})"/><rect x="80" y="96" width="40" height="22" fill="rgba(245,241,232,.92)"/><text x="100" y="112" font-family="Anton" font-size="13" fill="#162A3D" text-anchor="middle">NEXUS</text></svg>`;}
+/* ========== CHROME ========== */
+function applyI18n(){const d=I18N[state.lang];
+ $$('[data-i18n]').forEach(el=>{if(d[el.dataset.i18n]!=null)el.innerHTML=d[el.dataset.i18n]});
+ $$('[data-i18n-ph]').forEach(el=>el.placeholder=t(el.dataset.i18nPh));
+ document.documentElement.lang=state.lang;document.documentElement.dir=state.lang==='ar'?'rtl':'ltr';store.set('nx_lang',state.lang);}
+function buildChrome(){
+ $('#mqTrack').innerHTML=`<span>BEYOND THE ORDINARY</span><span>WHERE IDENTITY MEETS MOVEMENT</span><span>NEXUS — ALGIERS</span><span>FW26 — MOVE DIFFERENT</span>`.repeat(4);
+ $('#introWord').innerHTML="NEXUS".split('').map(c=>`<span>${c}</span>`).join('');
+ buildStage();buildScenes();buildCollections();buildFaq();
+ $('#cpGarb').innerHTML=garmentSVG(byId("NX-02"),1);
+ $('#storyImg').innerHTML=ph("1558769132-cb1aea458c5e","The NEXUS atelier — Algiers",900);
+}
+function buildCollections(){
+ const cats=[["tshirts","1521572163474-6864f9cf17ab","Tee editorial"],["pants","1541099649105-f69ad21f3246","Trouser editorial"],["acc","1548036328-c9fa89d128fa","Accessory editorial"]];
+ const L={tshirts:t('f_tshirts'),pants:t('f_pants'),acc:t('f_acc')};
+ $('#colGrid').innerHTML=cats.map((c,i)=>{const p=PRODUCTS.find(x=>x.cat===c[0]),n=PRODUCTS.filter(x=>x.cat===c[0]).length;
+  return `<article class="col-card c${i+1}" data-cat="${c[0]}" data-reveal tabindex="0" role="button" aria-label="${L[c[0]]}"><div class="cc-vis"><div class="garb" style="position:relative;z-index:1">${garmentSVG(p,0)}</div>${ph(c[1],c[2],1200)}</div><div class="cc-info"><div><span class="mono">${String(n).padStart(2,'0')} ${t('pieces')}</span><h3>${L[c[0]]}</h3></div><span class="cc-arrow">↗</span></div></article>`}).join('');
+ $$('#colGrid .col-card').forEach(c=>{const go=()=>{state.filter=c.dataset.cat;renderShop();$('#shop').scrollIntoView({behavior:REDUCED?'auto':'smooth'})};c.addEventListener('click',go);c.addEventListener('keydown',e=>{if(e.key==='Enter'){go()}})});
+}
+function buildFaq(){
+ const ks=[["fq1q","fq1a"],["fq2q","fq2a"],["fq3q","fq3a"],["fq4q","fq4a"],["fq5q","fq5a"],["fq6q","fq6a"]];
+ $('#faqList').innerHTML=ks.map(([q,a],i)=>`<div class="faq-item" data-reveal><button class="faq-q" aria-expanded="false"><span>${t(q)}</span><span class="ic">+</span></button><div class="faq-a"><div><p>${t(a)}</p></div></div></div>`).join('');
+ $$('#faqList .faq-q').forEach(b=>b.onclick=()=>{const it=b.closest('.faq-item'),open=it.classList.contains('open');
+  $$('#faqList .faq-item').forEach(x=>{x.classList.remove('open');x.querySelector('.faq-q').setAttribute('aria-expanded','false')});
+  if(!open){it.classList.add('open');b.setAttribute('aria-expanded','true')}});
+}
+/* ========== HERO STAGE ========== */
+const STAGE_IDS=["NX-02","NX-09","NX-01","NX-05","NX-10","NX-06","NX-11"];let stActive=2;
+function buildStage(){
+ $('#stageTrack').innerHTML=STAGE_IDS.map((id,i)=>{const p=byId(id);return `<div class="st-item" data-i="${i}"><div class="plinth"><div class="garb">${garmentSVG(p,0)}</div></div><div class="st-label"><b>${p.name}</b><span>${money(p.price)}</span></div></div>`}).join('');
+ $$('.st-item').forEach(el=>el.addEventListener('click',()=>{const i=+el.dataset.i;if(i===stActive)openQV(STAGE_IDS[i]);else{stActive=i;layoutStage(true)}}));
+ layoutStage(false);
+}
+function layoutStage(anim){
+ const items=$$('.st-item'),n=items.length,sp=innerWidth<700?120:215;
+ items.forEach((el,i)=>{let off=i-stActive;const h=n>>1;if(off>h)off-=n;if(off<-h)off+=n;const a=Math.abs(off);
+  const set={x:off*sp,z:-a*230,rotationY:off*-16,scale:1-a*.1,autoAlpha:a>3?0:1-a*.22,zIndex:10-a};
+  el.classList.toggle('active',off===0);
+  if(anim&&HAS_GSAP&&!REDUCED)gsap.to(el,{...set,duration:.9,ease:"power3.out"});else if(HAS_GSAP)gsap.set(el,set);else el.style.transform=`translateX(${off*sp}px)`;});
+}
+$('#stPrev').onclick=()=>{stActive=(stActive-1+STAGE_IDS.length)%STAGE_IDS.length;layoutStage(true)};
+$('#stNext').onclick=()=>{stActive=(stActive+1)%STAGE_IDS.length;layoutStage(true)};
+$('#stage').addEventListener('keydown',e=>{if(e.key==='ArrowLeft')$('#stPrev').click();if(e.key==='ArrowRight')$('#stNext').click()});
+let dragX=null;
+$('#stage').addEventListener('pointerdown',e=>dragX=e.clientX);
+addEventListener('pointerup',e=>{if(dragX===null)return;const d=e.clientX-dragX;dragX=null;if(Math.abs(d)>50){d<0?$('#stNext').click():$('#stPrev').click()}});
+/* ========== SCROLL SCENES ========== */
+const SCENES=[{id:"NX-01",specs:[["GSM","240",.9],["CUT","ALGIERS",1],["FIT","OVERSIZED",.72]]},{id:"NX-05",specs:[["TWILL","300",.95],["RISE","HIGH",.8],["HEM","FLOOR",1]]},{id:"NX-09",specs:[["PANELS","6",.85],["COTTON","BRUSHED",1],["STRAP","ADJUST",.66]]}];
+function buildScenes(){
+ $('#shScenes').innerHTML=SCENES.map((s,i)=>{const p=byId(s.id);return `<div class="scene" data-s="${i}">
+  <div class="sc-txt"><span class="mono idx">0${i+1} — 03</span><h3>${p.name}</h3><p class="sc-line">${DESCS[s.id][state.lang]||DESCS[s.id].en}</p>
+  <div class="spec">${s.specs.map(sp=>`<div class="spec-row"><div class="s-l"><span>${sp[0]}</span><b>${sp[1]}</b></div><div class="bar"><i style="--w:${sp[2]}"></i></div></div>`).join('')}</div>
+  <div class="sc-cta"><button class="link-arrow" data-open="${s.id}">${t('view_piece')} →</button></div></div>
+  <div class="sc-vis"><div class="sc-glow"></div><div class="sp-garb"><div class="garb">${garmentSVG(p,0)}</div></div></div></div>`}).join('');
+ $$('#shScenes [data-open]').forEach(b=>b.onclick=()=>openQV(b.dataset.open));
+}
+/* ========== SHOP ========== */
+function renderShop(){
+ const pills=[['all',t('f_all')],['tshirts',t('f_tshirts')],['pants',t('f_pants')],['acc',t('f_acc')]];
+ $('#catPills').innerHTML=pills.map(([v,l])=>`<button class="pill ${state.filter===v?'on':''}" data-f="${v}">${l}</button>`).join('');
+ $$('#catPills .pill').forEach(b=>b.onclick=()=>{state.filter=b.dataset.f;renderShop()});
+ $('#sortSel').innerHTML=`<option value="featured">${t('sort_f')}</option><option value="new">${t('sort_n')}</option><option value="asc">${t('sort_a')}</option><option value="desc">${t('sort_d')}</option>`;$('#sortSel').value=state.sort;
+ let list=PRODUCTS.filter(p=>state.filter==='all'||p.cat===state.filter);
+ if(state.sort==='asc')list.sort((a,b)=>a.price-b.price);if(state.sort==='desc')list.sort((a,b)=>b.price-a.price);
+ if(state.sort==='new')list.sort((a,b)=>(b.badge==='new')-(a.badge==='new'));
+ $('#resCount').textContent=t('results').replace('{n}',String(list.length).padStart(2,'0'));
+ $('#pgrid').innerHTML=list.map(p=>{const out=p.stock===0,low=p.stock>0&&p.stock<=3,w=state.wish.includes(p.id);
+  return `<article class="pcard ${out?'soldout':''}" data-id="${p.id}"><div class="pvis" style="background:${catBG()[p.cat]}" tabindex="0" role="button" aria-label="${p.name}">
+  ${p.badge==='new'?`<span class="pbadge">${t('new_l')}</span>`:''}${low?`<span class="pbadge low">${t('low').replace('{n}',p.stock)}</span>`:''}
+  <button class="wish-btn ${w?'on':''}" data-wish="${p.id}" aria-label="Wishlist"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-9-9c-1.4-3.2.8-7 4.3-7 2 0 3.6 1.2 4.7 3 1.1-1.8 2.7-3 4.7-3 3.5 0 5.7 3.8 4.3 7-2 4.4-9 9-9 9z"/></svg></button>
+  <div class="garb">${garmentSVG(p,0)}</div>${!out?`<div class="qv-bar"><button data-qv="${p.id}">${t('qv')}</button></div>`:''}</div>
+  <div class="pinfo"><div><span class="cat mono">${p.id}</span><h3>${p.name}</h3></div><span class="price">${money(p.price)}</span></div></article>`}).join('');
+ $$('#pgrid [data-qv]').forEach(b=>b.onclick=e=>{e.stopPropagation();openQV(b.dataset.qv)});
+ $$('#pgrid .pvis').forEach(v=>{const open=()=>openQV(v.closest('.pcard').dataset.id);
+  v.addEventListener('click',e=>{if(!e.target.closest('.wish-btn')&&!e.target.closest('.qv-bar'))open()});
+  v.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});
+ $$('#pgrid [data-wish]').forEach(b=>b.onclick=e=>{e.stopPropagation();toggleWish(b.dataset.wish)});
+}
+$('#sortSel').addEventListener('change',e=>{state.sort=e.target.value;renderShop()});
+/* ========== CART/WISH ========== */
+function persist(){store.set('nx_cart',state.cart);store.set('nx_wish',state.wish)}
+const cartN=()=>state.cart.reduce((s,i)=>s+i.qty,0);
+const cartSub=()=>state.cart.reduce((s,i)=>s+byId(i.id).price*i.qty,0);
+function updateCounts(p){const b=$('#bagCount'),w=$('#wishCount');b.textContent=cartN();w.textContent=state.wish.length;b.classList.toggle('on',cartN()>0);w.classList.toggle('on',state.wish.length>0);if(p){b.classList.remove('pulse');void b.offsetWidth;b.classList.add('pulse')}}
+function addToCart(id,size,qty=1,fromEl){const p=byId(id);if(!p||!p.stock)return;const k=id+'|'+size,e=state.cart.find(i=>i.key===k);
+ if(e)e.qty+=qty;else state.cart.push({key:k,id,size,qty});persist();updateCounts(true);if(fromEl)flyToBag(fromEl,p);toast(`${t('toast_add')} — ${p.name} · ${t('size')} ${size}`)}
+function flyToBag(fromEl,p){if(REDUCED||!HAS_GSAP)return;const r=fromEl.getBoundingClientRect(),b=$('#bagBtn').getBoundingClientRect();
+ const el=document.createElement('div');el.className='fly-img';el.style.cssText+=`left:${r.left}px;top:${r.top}px;width:${r.width}px;height:${r.height}px;background:${catBG()[p.cat]}`;
+ el.innerHTML=garmentSVG(p,0);document.body.appendChild(el);
+ gsap.to(el,{left:b.left+b.width/2-r.width*.11,top:b.top+b.height/2-r.height*.11,width:r.width*.22,height:r.height*.22,opacity:.4,duration:.9,ease:"power3.inOut",onComplete:()=>el.remove()})}
+function renderCart(){const body=$('#cartBody'),foot=$('#cartFoot');
+ if(!state.cart.length){body.innerHTML=`<div class="empty"><span class="ring">N</span><h4>${t('bag_empty_t')}</h4><p>${t('bag_empty_s')}</p><a class="btn btn-solid" href="#shop" data-close>${t('bag_cta')}</a></div>`;foot.innerHTML='';bindClosers(body);return}
+ body.innerHTML=state.cart.map(i=>{const p=byId(i.id);return `<div class="cart-item"><div class="ci-vis" style="background:${catBG()[p.cat]}">${garmentSVG(p,0)}</div><div class="ci-info"><h4>${p.name}</h4><div class="meta">${p.id} · ${t('size')} ${i.size}</div><span class="qty"><button data-dec="${i.key}">−</button><b>${i.qty}</b><button data-inc="${i.key}">+</button></span></div><div class="ci-right"><b>${money(p.price*i.qty)}</b><button class="rm-btn" data-rm="${i.key}">${t('bag_rm')}</button></div></div>`}).join('');
+ const sub=cartSub(),free=sub>=SHIP.freeOver;
+ foot.innerHTML=`<p class="free-ship">${free?t('bag_free_ok'):t('bag_free').replace('{p}',money(SHIP.freeOver))}</p><div class="sum-row"><span>${t('bag_sub')}</span><b>${money(sub)}</b></div><button class="btn btn-solid" style="width:100%;margin-top:14px" id="toCheckout">${t('bag_co')}</button>`;
+ $('#toCheckout').onclick=()=>{closeAll();openCheckout()};
+ body.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{state.cart.find(i=>i.key===b.dataset.inc).qty++;persist();renderCart();updateCounts()});
+ body.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{const it=state.cart.find(i=>i.key===b.dataset.dec);it.qty--;if(it.qty<1)state.cart=state.cart.filter(i=>i!==it);persist();renderCart();updateCounts()});
+ body.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{state.cart=state.cart.filter(i=>i.key!==b.dataset.rm);persist();renderCart();updateCounts()})}
+function toggleWish(id){const on=state.wish.includes(id);if(on){state.wish=state.wish.filter(w=>w!==id);toast(t('toast_wish_rm'))}else{state.wish.push(id);toast(t('toast_wish'))}persist();updateCounts();renderShop();renderWish();if(qvOpen&&qvId===id){const w=$('#qvWish');if(w)w.classList.toggle('on',!on)}}
+function renderWish(){const body=$('#wishBody');
+ if(!state.wish.length){body.innerHTML=`<div class="empty"><span class="ring">♡</span><h4>${t('wish_empty_t')}</h4><p>${t('wish_empty_s')}</p></div>`;return}
+ body.innerHTML=state.wish.map(id=>{const p=byId(id),sz=p.sizes.includes('M')?'M':p.sizes[0];return `<div class="cart-item"><div class="ci-vis" style="background:${catBG()[p.cat]}">${garmentSVG(p,0)}</div><div class="ci-info"><h4>${p.name}</h4><div class="meta">${money(p.price)}</div>${p.stock>0?`<button class="pill on" style="padding:8px 14px" data-wadd="${id}" data-sz="${sz}">${t('wish_move')}</button>`:`<span class="mono" style="color:var(--burnt)">${t('sold')}</span>`}</div><div class="ci-right"><button class="rm-btn" data-wrm="${id}">${t('bag_rm')}</button></div></div>`}).join('');
+ body.querySelectorAll('[data-wadd]').forEach(b=>b.onclick=()=>{addToCart(b.dataset.wadd,b.dataset.sz,1,b.closest('.cart-item'));closeDrawer($('#wishDrawer'))});
+ body.querySelectorAll('[data-wrm]').forEach(b=>b.onclick=()=>toggleWish(b.dataset.wrm))}
+/* ========== SEARCH ========== */
+function renderSearch(q){const box=$('#sResults'),query=(q||'').trim().toLowerCase();
+ const list=query?PRODUCTS.filter(p=>(p.name+p.cat+p.id).toLowerCase().includes(query)):PRODUCTS;
+ if(!list.length){box.innerHTML=`<p class="serif-i" style="grid-column:1/-1;text-align:center;padding:60px 0">${t('sr_empty')}</p>`;return}
+ box.innerHTML=list.map(p=>`<div class="s-item" data-id="${p.id}" tabindex="0" role="button" style="opacity:0;transform:translateY(16px)"><div class="pvis" style="background:${catBG()[p.cat]}"><div class="garb">${garmentSVG(p,0)}</div></div><div class="pinfo"><div><span class="cat mono">${p.id}</span><h3>${p.name}</h3></div><span class="price">${money(p.price)}</span></div></div>`).join('');
+ list.forEach((p,i)=>{const el=box.children[i],open=()=>{closeSearch();openQV(p.id)};el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()});
+  if(HAS_GSAP&&!REDUCED)gsap.to(el,{opacity:1,y:0,duration:.5,delay:i*.05,ease:"power3.out"});else{el.style.opacity=1;el.style.transform='none'}})}
+function openSearch(){closeAll(false);$('#searchOv').classList.add('on');renderSearch($('#searchInput').value);setTimeout(()=>$('#searchInput').focus(),80)}
+function closeSearch(){$('#searchOv').classList.remove('on')}
+$('#searchInput').addEventListener('input',e=>renderSearch(e.target.value));
+$('#searchBtn').onclick=openSearch;$('#searchClose').onclick=closeSearch;
+/* ========== QUICK VIEW ========== */
+let qvId=null,qvColor=0,qvSize=null,qvQty=1,qvOpen=false;
+function openQV(id){const p=byId(id);if(!p)return;qvId=id;qvColor=0;qvQty=1;qvSize=p.sizes.length===1?p.sizes[0]:null;qvOpen=true;renderQV();closeAll(false);$('#qvOv').classList.add('on');$('#scrim').classList.add('on');document.body.style.overflow='hidden'}
+function renderQV(){const p=byId(qvId),c=p.colors[qvColor],out=p.stock===0;
+ $('#qvPanel').innerHTML=`<button class="x-btn qv-x" data-close aria-label="Close">✕</button>
+ <div class="qv-media"><div class="qv-main" id="qvMain" style="background:${catBG()[p.cat]}">${garmentSVG(p,qvColor)}</div>
+ <div class="qv-thumbs"><button class="on" data-view="front">${garmentSVG(p,qvColor)}</button><button data-view="back">${garmentSVG(p,qvColor,'back')}</button><button data-view="d">${fabricSVG(c[1])}</button></div></div>
+ <div class="qv-info"><span class="cat mono">${p.id}</span><h2>${p.name}</h2><div class="qv-price">${money(p.price)}</div><p class="qv-desc">${DESCS[p.id][state.lang]||DESCS[p.id].en}</p>
+ <div class="opt-label"><span>${t('qv_color')}</span><span>${c[0]}</span></div><div class="swatches">${p.colors.map((cl,i)=>`<button class="swatch ${i===qvColor?'on':''}" data-ci="${i}" style="background:${cl[1]}" aria-label="${cl[0]}"></button>`).join('')}</div>
+ <div class="opt-label"><span>${t('qv_size')}</span><span id="qvSizeErr" style="color:var(--burnt);display:none">${t('qv_size_err')}</span></div><div class="sizes">${p.sizes.map(s=>`<button class="size-btn ${qvSize===s?'on':''}" data-s="${s}">${s}</button>`).join('')}</div>
+ <div class="qv-actions"><div class="qv-row"><span class="qty"><button id="qvDec">−</button><b id="qvQtyN">${qvQty}</b><button id="qvInc">+</button></span><button class="btn btn-solid" style="flex:1" id="qvAdd" ${out?'disabled':''}>${out?t('sold'):t('add')}</button><button class="icon-btn wish-btn ${state.wish.includes(p.id)?'on':''}" id="qvWish" style="position:static;background:var(--paper2)"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-9-9c-1.4-3.2.8-7 4.3-7 2 0 3.6 1.2 4.7 3 1.1-1.8 2.7-3 4.7-3 3.5 0 5.7 3.8 4.3 7-2 4.4-9 9-9 9z"/></svg></button></div>
+ ${out?'':`<button class="btn btn-ghost" id="qvBuy">${t('qv_buy')}</button>`}</div>
+ <div class="qv-meta"><span><b>${t('qv_fabric')}:</b> ${p.fabric}</span><span><b>${t('qv_fit')}:</b> ${p.fit}</span><span><b>${t('qv_sku')}:</b> ${p.id}</span><span style="color:${out?'var(--burnt)':'var(--sage)'}">${out?t('sold'):t('qv_stock')}</span><span class="serif-i">${t('qv_made')}</span></div></div>`;
+ $('#qvPanel [data-close]').onclick=closeAll;
+ $$('#qvPanel .swatch').forEach(b=>b.onclick=()=>{qvColor=+b.dataset.ci;renderQV()});
+ $$('#qvPanel [data-view]').forEach(b=>b.onclick=()=>{$$('#qvPanel [data-view]').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#qvMain').innerHTML=b.dataset.view==='d'?fabricSVG(p.colors[qvColor][1]):garmentSVG(p,qvColor,b.dataset.view)});
+ $$('#qvPanel .size-btn').forEach(b=>b.onclick=()=>{qvSize=b.dataset.s;$$('#qvPanel .size-btn').forEach(x=>x.classList.toggle('on',x.dataset.s===qvSize));$('#qvSizeErr').style.display='none'});
+ $('#qvInc').onclick=()=>{qvQty=Math.min(9,qvQty+1);$('#qvQtyN').textContent=qvQty};
+ $('#qvDec').onclick=()=>{qvQty=Math.max(1,qvQty-1);$('#qvQtyN').textContent=qvQty};
+ if(!out)$('#qvAdd').onclick=()=>{if(!qvSize){$('#qvSizeErr').style.display='inline';return}addToCart(p.id,qvSize,qvQty,$('#qvMain'))};
+ const buy=$('#qvBuy');if(buy)buy.onclick=()=>{if(!qvSize){$('#qvSizeErr').style.display='inline';return}addToCart(p.id,qvSize,qvQty);closeAll();openCheckout()};
+ $('#qvWish').onclick=()=>toggleWish(p.id)}
+/* ========== CHECKOUT ========== */
+let coWilaya="";
+function openCheckout(){if(!state.cart.length){openDrawer($('#cartDrawer'));return}closeAll(false);$('#coOv').classList.add('on');document.body.style.overflow='hidden';
+ const s=$('#fWilaya');s.innerHTML=`<option value="">${t('co_sel_w')}</option>`+WILAYAS.map(w=>`<option value="${w[0]}">${w[0]} — ${state.lang==='ar'?w[2]:w[1]}</option>`).join('');s.value=coWilaya;renderCoSummary();scrollTo({top:0})}
+function closeCheckout(){$('#coOv').classList.remove('on');document.body.style.overflow=''}
+function shipFee(){if(!coWilaya)return null;return cartSub()>=SHIP.freeOver?0:(REMOTE_W.includes(coWilaya)?SHIP.remote:SHIP.base)}
+function renderCoSummary(){$('#coItems').innerHTML=state.cart.map(i=>{const p=byId(i.id);return `<div class="co-item"><div class="ci-vis" style="background:${catBG()[p.cat]}">${garmentSVG(p,0)}</div><div class="nm">${p.name}<small>${t('size')} ${i.size} × ${i.qty}</small></div><b>${money(p.price*i.qty)}</b></div>`}).join('');
+ const sub=cartSub(),f=shipFee();$('#coSub').textContent=money(sub);$('#coShip').textContent=f===null?'—':f===0?t('co_free'):money(f);$('#coTotal').textContent=money(sub+(f||0));
+ $('#coEta').textContent=coWilaya?t('co_eta').replace('{d}',REMOTE_W.includes(coWilaya)?t('co_days_r'):t('co_days')):''}
+$('#fWilaya').addEventListener('change',e=>{coWilaya=e.target.value;renderCoSummary()});
+$('#coBack').onclick=closeCheckout;
+$('#coForm').addEventListener('submit',e=>{e.preventDefault();
+ const req=[['fName',v=>v.trim().length>2],['fPhone',v=>/^[0-9+\s()-]{8,}$/.test(v.trim())],['fWilaya',v=>!!v],['fCommune',v=>v.trim().length>1],['fAddr',v=>v.trim().length>4]];let ok=true;
+ req.forEach(([id,test])=>{const el=$('#'+id),f=el.closest('.field'),p=test(el.value);f.classList.toggle('err',!p);if(!p)ok=false});
+ if(!ok){$('#coErr').style.display='block';return}$('#coErr').style.display='none';
+ $('#okCode').textContent='NX-'+Math.random().toString(36).slice(2,6).toUpperCase()+Date.now().toString().slice(-4);
+ $('#okMsg').textContent=t('ok_msg').replace('{p}',$('#fPhone').value.replace(/\s/g,''));
+ $('#okDays').textContent=REMOTE_W.includes(coWilaya)?t('co_days_r'):t('co_days');
+ state.cart=[];persist();updateCounts();renderCart();closeCheckout();$('#okOv').classList.add('on')});
+$('#okClose').onclick=()=>{$('#okOv').classList.remove('on');document.body.style.overflow=''};
+/* ========== DRAWERS/MENU ========== */
+function openDrawer(d){closeAll(false);d.classList.add('open');$('#scrim').classList.add('on');document.body.style.overflow='hidden';if(d.id==='cartDrawer')renderCart();if(d.id==='wishDrawer')renderWish()}
+function closeDrawer(d){d.classList.remove('open');$('#scrim').classList.remove('on');document.body.style.overflow=''}
+function closeAll(){closeDrawer($('#cartDrawer'));closeDrawer($('#wishDrawer'));closeSearch();$('#qvOv').classList.remove('on');qvOpen=false;$('#menuOv').classList.remove('open');$('#burger').classList.remove('open');$('#scrim').classList.remove('on');document.body.style.overflow=''}
+function bindClosers(sc){(sc||document).querySelectorAll('[data-close]').forEach(b=>b.onclick=closeAll)}
+$('#bagBtn').onclick=()=>openDrawer($('#cartDrawer'));$('#wishBtn').onclick=()=>openDrawer($('#wishDrawer'));$('#scrim').onclick=closeAll;bindClosers();
+$('#burger').onclick=()=>{const o=$('#menuOv').classList.toggle('open');$('#burger').classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';$$('#menuOv nav a').forEach((a,i)=>a.style.transitionDelay=o?(.1+i*.07)+'s':'0s')};
+$$('#menuOv nav a').forEach(a=>a.addEventListener('click',closeAll));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+let toastTimer;function toast(m){const el=$('#toast');el.textContent=m;el.classList.add('on');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('on'),2600)}
+$('#newsForm').addEventListener('submit',e=>{e.preventDefault();if($('#newsEmail').value.includes('@')){toast(t('ft_news_ok'));$('#newsEmail').value=''}});
+/* ========== LANG/CUR/THEME ========== */
+function refreshAll(){buildChrome();renderShop();renderCart();renderWish();renderCoSummary();if(qvOpen)renderQV();if($('#searchOv').classList.contains('on'))renderSearch($('#searchInput').value);if(HAS_GSAP&&typeof ScrollTrigger!=='undefined')setTimeout(()=>ScrollTrigger.refresh(),60)}
+function setLang(l){state.lang=l;applyI18n();$$('.lang-cur button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));$('#langSel').value=l;refreshAll()}
+$$('.lang-cur button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+$('#langSel').addEventListener('change',e=>setLang(e.target.value));
+function setCur(c){state.cur=c;store.set('nx_cur',c);$('#curSel').value=c;refreshAll()}
+$('#curSel').addEventListener('change',e=>setCur(e.target.value));
+function setTheme(th){state.theme=th;document.documentElement.dataset.theme=th;store.set('nx_theme',th);refreshAll()}
+$('#themeBtn').onclick=()=>setTheme(state.theme==='dark'?'light':'dark');
+/* ========== MOTION ========== */
+function initMotion(){
+ if(!HAS_GSAP||REDUCED){$('#intro').style.display='none';return}
+ gsap.registerPlugin(ScrollTrigger);
+ const word=$$('#introWord span');
+ gsap.set(word,{yPercent:110,rotateX:-42,opacity:0,transformOrigin:"50% 100%"});
+ const tl=gsap.timeline({onComplete:()=>{$('#intro').style.display='none'}});
+ tl.to('#intro .rule',{height:'22vh',duration:.5,ease:"power3.inOut"})
+  .to(word,{yPercent:0,rotateX:0,opacity:1,duration:.9,stagger:.08,ease:"power4.out"},"-=.1")
+  .to('.intro-tag',{opacity:1,duration:.6},"-=.3").to({},{duration:.5})
+  .to('#intro',{yPercent:-100,duration:1.05,ease:"power4.inOut"})
+  .from('#heroWord',{yPercent:30,autoAlpha:0,duration:1.1,ease:"power4.out"},"-=.7")
+  .from('.st-item',{z:-900,autoAlpha:0,duration:1.1,stagger:.09,ease:"power3.out",onComplete:()=>layoutStage(false)},"-=.8")
+  .from('.hero-low > *, .hero-meta > *',{y:24,autoAlpha:0,duration:.8,stagger:.08,ease:"power3.out"},"-=.9")
+  .from('.hero-side',{autoAlpha:0,duration:1},"-=.6");
+ $('#intro').addEventListener('click',()=>tl.progress(1));
+ gsap.to('#prog',{scaleX:1,ease:'none',scrollTrigger:{start:0,end:'max',scrub:.4}});
+ gsap.to('#heroWord',{yPercent:-30,scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+ gsap.to('.stage',{scale:.92,autoAlpha:.2,scrollTrigger:{trigger:'#hero',start:'55% top',end:'bottom top',scrub:true}});
+ if(!TOUCH)$('#hero').addEventListener('mousemove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;
+  gsap.to('#stageTrack',{rotationY:x*6,rotationX:y*-3,transformPerspective:1400,duration:1.1,ease:"power3.out"})});
+ $$('[data-reveal]').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1,ease:"power3.out",scrollTrigger:{trigger:el,start:'top 88%'}}));
+ $$('[data-line]').forEach(el=>gsap.from(el,{yPercent:110,duration:1.1,ease:"power4.out",scrollTrigger:{trigger:el,start:'top 90%'}}));
+ /* scenes pin */
+ if(innerWidth>=820){
+  const sc=$$('#shScenes .scene');
+  const tl2=gsap.timeline({scrollTrigger:{trigger:'#shPin',start:'top top',end:'+=240%',pin:true,scrub:1}});
+  sc.forEach((el,i)=>{
+   tl2.to(el,{autoAlpha:1,duration:.5},i)
+      .fromTo(el.querySelectorAll('.bar i'),{scaleX:0},{scaleX:(j,ti)=>getComputedStyle(ti).getPropertyValue('--w')||1,duration:.4,stagger:.1},'<.1')
+      .fromTo(el.querySelector('.sp-garb'),{rotation:-16,scale:.9},{rotation:4,scale:1,duration:.9,ease:"none"},'<')
+      .to(el,{autoAlpha:0,y:-40,duration:.4},i+.75);});
+ }
+ /* campaign pin */
+ if(innerWidth>=820){
+  const tl3=gsap.timeline({scrollTrigger:{trigger:'#cpPin',start:'top top',end:'+=200%',pin:true,scrub:1}});
+  tl3.fromTo('#cpGarb',{x:'-42vw',rotation:-24,scale:.8,autoAlpha:0},{x:'0vw',rotation:0,scale:1,autoAlpha:1,duration:1,ease:"power2.out"})
+     .to('#cpGlow',{opacity:1,duration:.6},'<')
+     .to('#cpGarb',{x:'42vw',rotation:18,scale:.9,duration:1,ease:"power2.in"})
+     .to('.cp-word',{scale:1.12,duration:2,ease:"none"},0)
+     .to('#cpCta',{autoAlpha:1,y:0,duration:.4},"-=.2");
+ } else gsap.set('#cpCta',{autoAlpha:1});
+ gsap.to('.story-left h2',{yPercent:-8,scrollTrigger:{trigger:'#story',start:'top bottom',end:'bottom top',scrub:true}});
+ addEventListener('resize',()=>{layoutStage(false);ScrollTrigger.refresh()});
+}
+addEventListener('scroll',()=>$('#header').classList.toggle('solid',scrollY>50),{passive:true});
+/* ========== BOOT ========== */
+applyI18n();buildChrome();renderShop();updateCounts();
+$('#curSel').value=state.cur;$('#langSel').value=state.lang;
+$$('.lang-cur button').forEach(b=>b.classList.toggle('on',b.dataset.lang===state.lang));
+initMotion();
+addEventListener('load',()=>{if(HAS_GSAP&&typeof ScrollTrigger!=='undefined')ScrollTrigger.refresh()});
+</script>
+</body>
+</html>
